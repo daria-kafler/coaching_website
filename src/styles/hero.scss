@@ -1,12 +1,12 @@
 @import 'globals';
 
-.hero {
+#hero {
   background-image: url('../assets/Daria-hat.JPG');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
 
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
 
   position: relative;
@@ -20,7 +20,6 @@
     display: grid;
     gap: 2rem;
     padding-inline: 4rem;
-    max-width: 75%;
 
     .hero-title {
       font-size: $fs-700;
@@ -34,11 +33,18 @@
 }
 
 @media (max-width: 675px) {
-  .hero-title {
-    font-size: $fs-600 !important;
-  }
+  #hero {
+    .content-wrapper {
+      padding: 2rem !important;
+    }
 
-  .hero-text {
-    font-size: $fs-200 !important;
+    .hero-title {
+      font-size: $fs-600 !important;
+    }
+
+    .hero-text {
+      font-size: $fs-200 !important;
+      max-width: 75% !important;
+    }
   }
 }

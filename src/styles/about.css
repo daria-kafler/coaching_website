@@ -1,1 +1,92 @@
-/*# sourceMappingURL=about.css.map */
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  background-color: hsl(1, 39%, 42%);
+  font-family: "Inconsolata", monospace;
+  font-size: 1rem;
+  font-weight: 400;
+  color: hsl(51, 20%, 93%);
+  line-height: 1.5;
+  position: relative;
+}
+
+button {
+  height: 2rem;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 1rem 2rem !important;
+  align-items: center;
+  display: flex;
+  font-family: "Inconsolata", monospace;
+  font-size: 0.875rem;
+  font-weight: 400;
+  border-radius: 100vw;
+  border: none;
+  background-color: hsl(37, 95%, 55%);
+  color: hsl(120, 10%, 20%);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+button:hover {
+  background-color: hsl(1, 39%, 42%);
+  color: hsl(51, 20%, 93%);
+  box-shadow: 0 2px hsl(51, 20%, 93%);
+  transform: translateY(-0.25rem);
+  font-weight: 800;
+}
+button:active {
+  transform: translateY(0);
+  background-color: hsl(37, 95%, 55%);
+  color: hsl(1, 39%, 42%);
+  box-shadow: none;
+}
+
+#about .content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 80vh;
+  padding: 10rem;
+}
+#about .content-wrapper img {
+  width: 80%;
+  max-width: 500px;
+  opacity: 0.65;
+  box-shadow: 0 1px 3px hsl(120, 10%, 20%);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  margin-left: auto;
+}
+#about .content-wrapper .about-me {
+  position: absolute;
+  min-width: 250px;
+  max-width: 50%;
+  font-size: 1.375rem;
+  left: 10vw;
+  bottom: 20vh;
+}
+
+@media (max-width: 675px) {
+  #about .content-wrapper {
+    padding: 5rem 2rem;
+  }
+  #about .content-wrapper .about-me {
+    font-size: 1rem;
+    font-weight: 200;
+    width: 80%;
+    bottom: 10vh;
+  }
+}/*# sourceMappingURL=about.css.map */

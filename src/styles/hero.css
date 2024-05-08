@@ -13,6 +13,7 @@ svg {
 }
 
 body {
+  background-color: hsl(1, 39%, 42%);
   font-family: "Inconsolata", monospace;
   font-size: 1rem;
   font-weight: 400;
@@ -52,38 +53,41 @@ button:active {
   box-shadow: none;
 }
 
-.hero {
+#hero {
   background-image: url("../assets/Daria-hat.JPG");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   position: relative;
   display: grid;
   place-content: center;
 }
-.hero .content-wrapper {
+#hero .content-wrapper {
   max-width: 1200px;
   padding-top: 37.5px;
   display: grid;
   gap: 2rem;
   padding-inline: 4rem;
-  max-width: 75%;
 }
-.hero .content-wrapper .hero-title {
+#hero .content-wrapper .hero-title {
   font-size: 3.25rem;
 }
-.hero .content-wrapper .hero-text {
+#hero .content-wrapper .hero-text {
   max-width: 50%;
   font-size: 1.125rem;
 }
 
 @media (max-width: 675px) {
-  .hero-title {
+  #hero .content-wrapper {
+    padding: 2rem !important;
+  }
+  #hero .hero-title {
     font-size: 1.75rem !important;
   }
-  .hero-text {
+  #hero .hero-text {
     font-size: 0.875rem !important;
+    max-width: 75% !important;
   }
 }/*# sourceMappingURL=hero.css.map */
