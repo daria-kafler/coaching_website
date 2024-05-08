@@ -1,0 +1,88 @@
+// ! colours
+$clr--neutral: hsla(51, 20, 93, 100%);
+$clr--primary: hsla(1, 39, 42, 100%);
+$clr--secondary: hsla(120, 10, 20, 100%);
+$clr--accent: hsla(37, 95, 55, 100%);
+
+// ! fonts
+// family
+$ff-base: 'Inconsolata', monospace;
+
+// weight
+$fw-light: 200;
+$fw-regular: 400;
+$fw-semi-bold: 500;
+$fw-bold: 600;
+$fw-black: 800;
+
+// size
+$fs-200: 0.875rem;
+$fs-300: 1rem;
+$fs-400: 1.125rem;
+$fs-500: 1.375rem;
+$fs-600: 1.75rem;
+$fs-700: 3.25rem;
+
+// max-width
+$max-width: 1200px;
+
+// navbar related
+$__nav-height: 75px;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  font-family: $ff-base;
+  font-size: $fs-300;
+  font-weight: $fw-regular;
+  color: $clr--neutral;
+  line-height: 1.5;
+  position: relative;
+}
+
+button {
+  height: 2rem;
+  width: max-content;
+  padding: 1rem 2rem !important;
+  align-items: center;
+  display: flex;
+
+  font-family: $ff-base;
+  font-size: $fs-200;
+  font-weight: $fw-regular;
+
+  border-radius: 100vw;
+  border: none;
+  background-color: $clr--accent;
+  color: $clr--secondary;
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+  &:hover {
+    background-color: $clr--primary;
+    color: $clr--neutral;
+    box-shadow: 0 2px $clr--neutral;
+    transform: translateY(-0.25rem);
+    font-weight: $fw-black;
+  }
+
+  &:active {
+    transform: translateY(0);
+    background-color: $clr--accent;
+    color: $clr--primary;
+    box-shadow: none;
+  }
+}
