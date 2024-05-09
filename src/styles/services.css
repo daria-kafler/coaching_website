@@ -22,7 +22,7 @@ body {
   position: relative;
 }
 
-button {
+.primary-button {
   height: 2rem;
   width: -moz-max-content;
   width: max-content;
@@ -39,14 +39,14 @@ button {
   cursor: pointer;
   transition: all 0.25s ease;
 }
-button:hover {
+.primary-button:hover {
   background-color: hsl(1, 39%, 42%);
   color: hsl(51, 20%, 93%);
   box-shadow: 0 2px hsl(51, 20%, 93%);
   transform: translateY(-0.25rem);
   font-weight: 800;
 }
-button:active {
+.primary-button:active {
   transform: translateY(0);
   background-color: hsl(37, 95%, 55%);
   color: hsl(1, 39%, 42%);
@@ -67,6 +67,7 @@ button:active {
   place-items: center;
   padding-inline: 4rem;
   gap: 5rem;
+  max-width: 1200px;
 }
 #products .content-wrapper h1 {
   font-size: 3.25rem;
@@ -79,6 +80,7 @@ button:active {
   gap: 4rem;
 }
 #products .content-wrapper .services-list li {
+  max-width: 400px;
   text-align: center;
   display: grid;
   gap: 2rem;
@@ -88,6 +90,9 @@ button:active {
 }
 
 @media (max-width: 750px) {
+  #products {
+    min-height: 60vh;
+  }
   #products .content-wrapper {
     display: flex;
     flex-direction: column;

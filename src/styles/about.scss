@@ -1,46 +1,48 @@
 @import 'globals';
 
 #about {
+  min-height: fit-content;
   .content-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    min-height: 80vh;
-    padding: 10rem;
+    display: grid;
+    place-items: center;
+    padding: 8rem;
 
-    img {
-      width: 80%;
-      max-width: 500px;
-      opacity: 0.65;
-      box-shadow: 0 1px 3px $clr--secondary;
-      border-top-left-radius: 50%;
-      border-top-right-radius: 50%;
-      margin-left: auto;
-    }
-    
-    .about-me {
-      position: absolute;
-      min-width: 250px;
-      max-width: 50%;
-      font-size: $fs-500;
+    .text-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
       left: 10vw;
-      bottom: calc(80vh * 0.25);
-    }
 
+      h1 {
+        font-size: $fs-650;
+      }
+      .about-me {
+        min-width: 250px;
+        max-width: 90%;
+        font-size: $fs-400;
+        bottom: calc(80vh * 0.25);
+      }
+    }
   }
 }
 
 @media (max-width: 675px) {
   #about {
+    min-height: 60vh;
     .content-wrapper {
-      padding: 5rem 2rem;
-      
-      .about-me {
-        font-size: $fs-300;
-        font-weight: $fw-light;
-        width: 80%;
-        bottom: 10vh;
+      padding: 3rem 2rem;
+
+      .text-content {
+        width: 90%;
+        gap: 1rem;
+        h1 {
+          font-size: $fs-400;
+        }
+
+        .about-me {
+          font-size: $fs-300;
+          font-weight: $fw-light;
+        }
       }
     }
   }

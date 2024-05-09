@@ -17,6 +17,7 @@
     place-items: center;
     padding-inline: 4rem;
     gap: 5rem;
+    max-width: 1200px;
 
     h1 {
       font-size: $fs-700;
@@ -28,8 +29,9 @@
       grid-auto-flow: column;
       list-style: none;
       gap: 4rem;
-
+      
       li {
+        max-width: 400px;
         text-align: center;
         display: grid;
         gap: 2rem;
@@ -44,6 +46,7 @@
 
 @media (max-width: 750px) {
   #products {
+    min-height: 60vh;
     .content-wrapper {
       display: flex;
       flex-direction: column;

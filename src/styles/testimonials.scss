@@ -1,1 +1,80 @@
 @import 'globals';
+
+#testimonials {
+  min-height: 70vh;
+  padding-block: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .content-wrapper {
+    h1 {
+      margin-top: 5rem;
+      margin-left: 2rem;
+      font-size: $fs-650;
+    }
+
+    .single-testimonial {
+      gap: 0.1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-inline: 1rem;
+      padding-block: 2rem;
+
+      .card-top {
+        display: flex;
+        align-items: center;
+
+        .full-name {
+          margin: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.slick-slider > button:first-of-type {
+  left: 2rem !important;
+}
+
+.slick-slider > button:last-of-type {
+  right: 2rem !important;
+}
+
+@media (max-width: 1024px) {
+  #testimonials {
+    min-height: 50vh;
+    padding-block: 2rem;
+
+    .content-wrapper {
+      h1 {
+        margin-left: unset;
+        margin-top: 3rem;
+        padding-inline: 2rem;
+        font-size: $fs-500;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .slick-slider > button {
+    display: none !important;
+  }
+
+  .single-testimonial {
+    padding-inline: unset !important;
+    padding-block: 1rem !important;
+    width: 80% !important;
+    .card-top {
+      .full-name {
+        margin: 1rem;
+        font-size: $fs-200;
+      }
+    }
+    .card-body {
+      font-size: $fs-200;
+    }
+  }
+}

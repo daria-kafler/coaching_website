@@ -22,7 +22,7 @@ body {
   position: relative;
 }
 
-button {
+.primary-button {
   height: 2rem;
   width: -moz-max-content;
   width: max-content;
@@ -39,16 +39,82 @@ button {
   cursor: pointer;
   transition: all 0.25s ease;
 }
-button:hover {
+.primary-button:hover {
   background-color: hsl(1, 39%, 42%);
   color: hsl(51, 20%, 93%);
   box-shadow: 0 2px hsl(51, 20%, 93%);
   transform: translateY(-0.25rem);
   font-weight: 800;
 }
-button:active {
+.primary-button:active {
   transform: translateY(0);
   background-color: hsl(37, 95%, 55%);
   color: hsl(1, 39%, 42%);
   box-shadow: none;
+}
+
+#testimonials {
+  min-height: 70vh;
+  padding-block: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#testimonials .content-wrapper h1 {
+  margin-top: 5rem;
+  margin-left: 2rem;
+  font-size: 2.5rem;
+}
+#testimonials .content-wrapper .single-testimonial {
+  gap: 0.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline: 1rem;
+  padding-block: 2rem;
+}
+#testimonials .content-wrapper .single-testimonial .card-top {
+  display: flex;
+  align-items: center;
+}
+#testimonials .content-wrapper .single-testimonial .card-top .full-name {
+  margin: 1rem;
+}
+
+.slick-slider > button:first-of-type {
+  left: 2rem !important;
+}
+
+.slick-slider > button:last-of-type {
+  right: 2rem !important;
+}
+
+@media (max-width: 1024px) {
+  #testimonials {
+    min-height: 50vh;
+    padding-block: 2rem;
+  }
+  #testimonials .content-wrapper h1 {
+    margin-left: unset;
+    margin-top: 3rem;
+    padding-inline: 2rem;
+    font-size: 1.375rem;
+  }
+}
+@media (max-width: 500px) {
+  .slick-slider > button {
+    display: none !important;
+  }
+  .single-testimonial {
+    padding-inline: unset !important;
+    padding-block: 1rem !important;
+    width: 80% !important;
+  }
+  .single-testimonial .card-top .full-name {
+    margin: 1rem;
+    font-size: 0.875rem;
+  }
+  .single-testimonial .card-body {
+    font-size: 0.875rem;
+  }
 }/*# sourceMappingURL=testimonials.css.map */

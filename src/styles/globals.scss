@@ -16,11 +16,13 @@ $fw-bold: 600;
 $fw-black: 800;
 
 // size
+$fs-100: 0.5rem;
 $fs-200: 0.875rem;
 $fs-300: 1rem;
 $fs-400: 1.125rem;
 $fs-500: 1.375rem;
 $fs-600: 1.75rem;
+$fs-650: 2.5rem;
 $fs-700: 3.25rem;
 
 // max-width
@@ -53,7 +55,7 @@ body {
   position: relative;
 }
 
-button {
+.primary-button {
   height: 2rem;
   width: max-content;
   padding: 1rem 2rem !important;

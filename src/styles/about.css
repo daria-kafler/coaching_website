@@ -22,7 +22,7 @@ body {
   position: relative;
 }
 
-button {
+.primary-button {
   height: 2rem;
   width: -moz-max-content;
   width: max-content;
@@ -39,54 +39,61 @@ button {
   cursor: pointer;
   transition: all 0.25s ease;
 }
-button:hover {
+.primary-button:hover {
   background-color: hsl(1, 39%, 42%);
   color: hsl(51, 20%, 93%);
   box-shadow: 0 2px hsl(51, 20%, 93%);
   transform: translateY(-0.25rem);
   font-weight: 800;
 }
-button:active {
+.primary-button:active {
   transform: translateY(0);
   background-color: hsl(37, 95%, 55%);
   color: hsl(1, 39%, 42%);
   box-shadow: none;
 }
 
+#about {
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+}
 #about .content-wrapper {
+  display: grid;
+  place-items: center;
+  padding: 8rem;
+}
+#about .content-wrapper .text-content {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  min-height: 80vh;
-  padding: 10rem;
-}
-#about .content-wrapper img {
-  width: 80%;
-  max-width: 500px;
-  opacity: 0.65;
-  box-shadow: 0 1px 3px hsl(120, 10%, 20%);
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  margin-left: auto;
-}
-#about .content-wrapper .about-me {
-  position: absolute;
-  min-width: 250px;
-  max-width: 50%;
-  font-size: 1.375rem;
+  flex-direction: column;
+  gap: 2rem;
   left: 10vw;
+}
+#about .content-wrapper .text-content h1 {
+  font-size: 2.5rem;
+}
+#about .content-wrapper .text-content .about-me {
+  min-width: 250px;
+  max-width: 90%;
+  font-size: 1.125rem;
   bottom: 20vh;
 }
 
 @media (max-width: 675px) {
-  #about .content-wrapper {
-    padding: 5rem 2rem;
+  #about {
+    min-height: 60vh;
   }
-  #about .content-wrapper .about-me {
+  #about .content-wrapper {
+    padding: 3rem 2rem;
+  }
+  #about .content-wrapper .text-content {
+    width: 90%;
+    gap: 1rem;
+  }
+  #about .content-wrapper .text-content h1 {
+    font-size: 1.125rem;
+  }
+  #about .content-wrapper .text-content .about-me {
     font-size: 1rem;
     font-weight: 200;
-    width: 80%;
-    bottom: 10vh;
   }
 }/*# sourceMappingURL=about.css.map */
