@@ -67,7 +67,7 @@ body {
   place-items: center;
   padding-inline: 4rem;
   gap: 5rem;
-  max-width: 1200px;
+  max-width: 1500px;
 }
 #products .content-wrapper h1 {
   font-size: 3.25rem;
@@ -79,17 +79,17 @@ body {
   list-style: none;
   gap: 4rem;
 }
-#products .content-wrapper .services-list li {
-  max-width: 400px;
+#products .content-wrapper .services-list .single-service {
+  max-width: 500px;
   text-align: center;
   display: grid;
-  gap: 2rem;
+  gap: 1rem;
 }
-#products .content-wrapper .services-list li h3 {
-  font-size: 1.75rem;
+#products .content-wrapper .services-list .single-service h3 {
+  font-size: 1.375rem;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1000px) {
   #products {
     min-height: 60vh;
   }
@@ -105,18 +105,19 @@ body {
   #products .content-wrapper .services-list {
     padding: 0;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
   }
-  #products .content-wrapper .services-list li {
+  #products .content-wrapper .services-list .single-service {
     text-align: center;
     display: grid;
-    gap: 1rem;
+    gap: 0.5rem;
   }
-  #products .content-wrapper .services-list li h3 {
+  #products .content-wrapper .services-list .single-service h3 {
     font-size: 1.125rem;
   }
-  #products .content-wrapper .services-list li p {
+  #products .content-wrapper .services-list .single-service p {
     font-size: 0.875rem;
   }
 }/*# sourceMappingURL=services.css.map */

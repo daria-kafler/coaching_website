@@ -1,17 +1,20 @@
 @import 'globals';
 
 #testimonials {
-  min-height: 70vh;
-  padding-block: 4rem;
+  background-color: $clr--secondary;
+
+  min-height: 60vh;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   .content-wrapper {
     h1 {
-      margin-top: 5rem;
       margin-left: 2rem;
-      font-size: $fs-650;
+      font-size: $fs-600;
+      width: 90%;
+      margin: 0 auto 4rem auto;
     }
 
     .single-testimonial {
@@ -42,6 +45,18 @@
   right: 2rem !important;
 }
 
+.slick-dots > li > button:before {
+  color: $clr--neutral;
+}
+.slick-dots > li.slick-active > button:before {
+  color: $clr--accent
+}
+
+.slick-prev:before, .slick-next:before {
+  color: $clr--accent
+}
+
+
 @media (max-width: 1024px) {
   #testimonials {
     min-height: 50vh;
@@ -49,10 +64,10 @@
 
     .content-wrapper {
       h1 {
-        margin-left: unset;
-        margin-top: 3rem;
+        margin: 0 auto;
+        width: unset;
         padding-inline: 2rem;
-        font-size: $fs-500;
+        font-size: $fs-400;
       }
     }
   }
