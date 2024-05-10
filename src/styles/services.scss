@@ -20,7 +20,9 @@
     max-width: 1500px;
 
     h1 {
-      font-size: $fs-700;
+      font-size: $fs-650;
+      width: 100%;
+      text-align: right;
     }
 
     .services-list {

@@ -31,7 +31,7 @@ function CustomSlide({ singleTestimonial }) {
           )}
           <div className="full-name">
             <h3 className="first-name">{singleTestimonial.firstName}</h3>
-            <p className="verified-user">Verified User</p>
+            <p className="custom-field">{singleTestimonial.customField ? singleTestimonial.customField : ''}</p>
           </div>
         </div>
         <div className="card-body">

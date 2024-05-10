@@ -12,12 +12,10 @@ function App() {
       <Navigation />
       <Hero />
       <About />
+      <Teamup /> 
       <Services />
-
       {/*Team up with me page is fooked on mobile and missing proper styling for now */}
-      {/* <Teamup />  */}
-
-      <Testimonials />
+      <Testimonials /> 
     </>
   );
 }

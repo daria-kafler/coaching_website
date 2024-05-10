@@ -24,6 +24,11 @@ $__height: 80vh;
       right: 10%;
       top: 20%;
       width: 60%;
+
+      h1 {
+        font-size: $fs-650;
+      }
+
       ul {
         margin-top: 1rem;
         display: flex;

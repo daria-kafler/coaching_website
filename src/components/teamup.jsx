@@ -8,7 +8,7 @@ export default function Teamup() {
         <div className="content-wrapper">
 
           <div className="text-content">
-            <h1>When you team up with me:</h1>
+            <h1>Then team up with me:</h1>
             <ul>
               <li>
                 We'll delve into your movement habits, connection with food, and work productivity patterns. This will

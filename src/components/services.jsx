@@ -3,7 +3,7 @@ export default function Services() {
     <>
       <section id="products">
         <div className="content-wrapper">
-          <h1>Then work with me...</h1>
+          <h1>Ways we can work together</h1>
           <ul className="services-list">
             <li className="single-service">
               <h3 className='service-name'>Ad Hoc Chat</h3>
