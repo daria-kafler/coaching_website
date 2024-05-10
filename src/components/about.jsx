@@ -1,5 +1,3 @@
-import Daria from '../assets/Daria-coffee.jpg';
-
 export default function About() {
   return (
     <>
