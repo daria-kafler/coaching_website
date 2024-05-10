@@ -64,7 +64,7 @@ body {
   margin-left: 2rem;
   font-size: 1.75rem;
   width: 90%;
-  margin: 0 auto 4rem auto;
+  margin: 4rem;
 }
 #testimonials .content-wrapper .single-testimonial {
   gap: 0.1rem;
@@ -98,7 +98,8 @@ body {
   color: hsl(37, 95%, 55%);
 }
 
-.slick-prev:before, .slick-next:before {
+.slick-prev:before,
+.slick-next:before {
   color: hsl(37, 95%, 55%);
 }
 
