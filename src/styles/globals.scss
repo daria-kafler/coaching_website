@@ -25,11 +25,24 @@ $fs-600: 1.75rem;
 $fs-650: 2.5rem;
 $fs-700: 3.25rem;
 
-// max-width
+// !max-width
 $max-width: 1200px;
 
-// navbar related
+// !navbar related
 $__nav-height: 75px;
+
+// !element-specific variables
+// Large Screens
+$lsh1-fs: $fs-650;
+$lsh2-fs: $fs-650;
+$lsh3-fs: $fs-500;
+$lsp-fs: $fs-400;
+
+// Small Screens
+$ssh1-fs: $fs-600;
+$ssh2-fs: $fs-500;
+$ssh3-fs: $fs-400;
+$ssp-fs: $fs-200;
 
 *,
 *::after,

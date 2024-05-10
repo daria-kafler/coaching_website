@@ -1,26 +1,31 @@
 @import 'globals';
 
 #about {
-  min-height: fit-content;
+  min-height: 70vh;
+  width: 100%;
+
+  display: grid;
+  place-content: center;
+
   background-color: $clr--neutral;
   color: $clr--secondary;
 
-
   .content-wrapper {
-    display: grid;
-    place-items: center;
+    max-width: $max-width;
     padding: 4rem;
-
+    display: grid;
+    
     .text-content {
+      min-width: fit-content;
       display: flex;
       flex-direction: column;
       gap: 2rem;
       left: 10vw;
       text-wrap: pretty;
       text-align: justify;
-      
+
       h1 {
-        font-size: $fs-650;
+        font-size: $lsh1-fs;
       }
 
       ul {
@@ -32,8 +37,7 @@
 
         li {
           min-width: 250px;
-          max-width: 90%;
-          font-size: $fs-300;
+          font-size: $lsp-fs;
           bottom: calc(80vh * 0.25);
         }
       }
@@ -47,18 +51,20 @@
     .content-wrapper {
       padding: 3rem 2rem;
       display: block;
-
+      
       .text-content {
-        width: 80%;
-        gap: 1rem;
         text-align: unset;
+        gap: 1rem;
         h1 {
-          font-size: $fs-400;
+          font-size: $ssh2-fs;
         }
-
-        li {
-          font-size: $fs-200;
-          font-weight: $fw-light;
+        
+        ul {
+          li {
+            font-size: $ssp-fs;
+            font-weight: $fw-light;
+            width: 90%;
+          }
         }
       }
     }

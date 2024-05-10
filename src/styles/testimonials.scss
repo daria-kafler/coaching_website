@@ -3,18 +3,21 @@
 #testimonials {
   background-color: $clr--secondary;
 
-  min-height: 60vh;
+  min-height: 70vh;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 
   .content-wrapper {
+    max-width: $max-width;
+    padding: 4rem;
+
     h1 {
-      margin-left: 2rem;
+      margin: 0 0 2rem 4rem;
       font-size: $fs-600;
       width: 90%;
-      margin: 4rem;
     }
 
     .single-testimonial {
@@ -59,21 +62,34 @@
 
 @media (max-width: 1024px) {
   #testimonials {
-    min-height: 50vh;
-    padding-block: 2rem;
+    min-height: fit-content;
 
     .content-wrapper {
+      padding: 4rem;
+      width: 100%;
       h1 {
-        margin: 0 auto;
-        width: unset;
-        padding-inline: 2rem;
+        margin: unset;
         font-size: $fs-400;
       }
     }
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 675px) {
+
+  #testimonials {
+    min-height: fit-content;
+
+    .content-wrapper {
+      padding: 4rem 2rem;
+      width: 100%;
+      h1 {
+        margin: unset;
+        font-size: $fs-400;
+      }
+    }
+  }
+
   .slick-slider > button {
     display: none !important;
   }
@@ -81,7 +97,8 @@
   .single-testimonial {
     padding-inline: unset !important;
     padding-block: 1rem !important;
-    width: 80% !important;
+    width: 90% !important;
+
     .card-top {
       .full-name {
         margin: 1rem;
@@ -89,6 +106,9 @@
       }
     }
     .card-body {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
       font-size: $fs-200;
     }
   }

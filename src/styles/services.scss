@@ -1,10 +1,10 @@
 @import 'globals';
 
 #products {
+  min-height: 70vh;
   background-color: $clr--neutral;
   color: $clr--secondary;
 
-  min-height: 80vh;
   width: 100%;
 
   position: relative;
@@ -13,14 +13,16 @@
   place-content: center;
 
   .content-wrapper {
+    max-width: $max-width;
+    padding: 4rem;
+
     display: grid;
     place-items: center;
-    padding-inline: 4rem;
+
     gap: 5rem;
-    max-width: 1500px;
 
     h1 {
-      font-size: $fs-650;
+      font-size: $lsh1-fs;
       width: 100%;
       text-align: right;
     }
@@ -33,20 +35,20 @@
       gap: 4rem;
 
       .single-service {
-        max-width: 500px;
+        max-width: 250px;
         text-align: center;
         display: grid;
         gap: 1rem;
 
         h3 {
-          font-size: $fs-500;
+          font-size: $lsh3-fs;
         }
       }
     }
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   #products {
     min-height: 60vh;
     .content-wrapper {
@@ -56,7 +58,7 @@
       gap: 2rem;
 
       h1 {
-        font-size: $fs-600;
+        font-size: $ssh2-fs;
       }
 
       .services-list {
@@ -72,11 +74,11 @@
           gap: 0.5rem;
 
           h3 {
-            font-size: $fs-400;
+            font-size: $ssh3-fs;
           }
 
           p {
-            font-size: $fs-200;
+            font-size: $ssp-fs;
           }
         }
       }

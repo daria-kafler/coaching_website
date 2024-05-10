@@ -17,17 +17,18 @@
   .content-wrapper {
     max-width: $max-width;
     padding-top: calc($__nav-height / 2);
+    padding-inline: 4rem;
+    
     display: grid;
     gap: 2rem;
-    padding-inline: 4rem;
 
     .hero-title {
-      font-size: $fs-700;
+      font-size: $lsh1-fs;
     }
 
     .hero-text {
       max-width: 50%;
-      font-size: $fs-400;
+      font-size: $lsp-fs;
     }
   }
 }
@@ -39,7 +40,7 @@
     }
 
     .hero-title {
-      font-size: $fs-600 !important;
+      font-size: $ssh1-fs !important;
     }
 
     .hero-text {
