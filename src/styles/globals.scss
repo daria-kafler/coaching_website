@@ -34,7 +34,7 @@ $__nav-height: 75px;
 // !element-specific variables
 // Large Screens
 $lsh1-fs: $fs-650;
-$lsh2-fs: $fs-650;
+$lsh2-fs: $fs-600;
 $lsh3-fs: $fs-500;
 $lsp-fs: $fs-400;
 
@@ -101,4 +101,10 @@ body {
     color: $clr--primary;
     box-shadow: none;
   }
+}
+
+.secondary-button {
+  @extend .primary-button;
+  background-color: $clr--primary;
+  color: $clr--neutral;
 }

@@ -1,0 +1,136 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  background-color: hsl(1, 39%, 42%);
+  font-family: "Inconsolata", monospace;
+  font-size: 1rem;
+  font-weight: 400;
+  color: hsl(51, 20%, 93%);
+  line-height: 1.5;
+  position: relative;
+}
+
+.primary-button, .secondary-button {
+  height: 2rem;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 1rem 2rem !important;
+  align-items: center;
+  display: flex;
+  font-family: "Inconsolata", monospace;
+  font-size: 0.875rem;
+  font-weight: 400;
+  border-radius: 100vw;
+  border: none;
+  background-color: hsl(37, 95%, 55%);
+  color: hsl(120, 10%, 20%);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.primary-button:hover, .secondary-button:hover {
+  background-color: hsl(1, 39%, 42%);
+  color: hsl(51, 20%, 93%);
+  box-shadow: 0 2px hsl(51, 20%, 93%);
+  transform: translateY(-0.25rem);
+  font-weight: 800;
+}
+.primary-button:active, .secondary-button:active {
+  transform: translateY(0);
+  background-color: hsl(37, 95%, 55%);
+  color: hsl(1, 39%, 42%);
+  box-shadow: none;
+}
+
+.secondary-button {
+  background-color: hsl(1, 39%, 42%);
+  color: hsl(51, 20%, 93%);
+}
+
+#form {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  place-content: center;
+  background-color: hsl(37, 95%, 55%);
+  color: hsl(120, 10%, 20%);
+}
+#form .content-wrapper {
+  min-height: 100%;
+  max-width: 1200px;
+  min-width: 1200px;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+#form .content-wrapper .form-title {
+  font-size: 1.75rem;
+}
+#form .content-wrapper .form-field {
+  min-height: 100%;
+  min-width: 100%;
+  flex-grow: 1;
+  position: relative;
+  padding: 10rem 2rem;
+  border-radius: 1rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+#form .content-wrapper .form-field .single-question {
+  display: flex;
+  flex-direction: column;
+}
+#form .content-wrapper .form-field .single-question h1 {
+  font-size: 1.375rem;
+  margin: 2rem 0 0 0;
+}
+#form .content-wrapper .form-field .single-question input[type=text-area],
+#form .content-wrapper .form-field .single-question textarea,
+#form .content-wrapper .form-field .single-question input[type=email] {
+  outline: none;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  background-color: inherit;
+  padding: 12px 50px 12px 0;
+  border: none;
+  border-bottom: 2px solid hsl(120, 10%, 20%);
+  font-size: 1.125rem;
+  color: hsl(120, 10%, 20%);
+}
+#form .content-wrapper .form-field .single-question .non-text {
+  font-size: 1.125rem;
+}
+#form .content-wrapper .form-field .single-question .non-text input {
+  margin: 1rem;
+  outline: none;
+}
+#form .content-wrapper .form-field .prev-next-buttons {
+  padding-block: 0 2rem;
+  display: flex;
+  flex-direction: row;
+  margin-top: auto;
+}
+#form .content-wrapper .form-field .prev-next-buttons button {
+  margin-right: 1rem;
+}
+#form .content-wrapper .form-field .progress {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  height: 5px;
+  background-color: hsl(1, 39%, 42%);
+  border-radius: inherit;
+  transition: width 0.25s ease-in-out;
+}/*# sourceMappingURL=form.css.map */

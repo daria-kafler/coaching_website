@@ -22,7 +22,7 @@ body {
   position: relative;
 }
 
-.primary-button {
+.primary-button, .secondary-button {
   height: 2rem;
   width: -moz-max-content;
   width: max-content;
@@ -39,18 +39,23 @@ body {
   cursor: pointer;
   transition: all 0.25s ease;
 }
-.primary-button:hover {
+.primary-button:hover, .secondary-button:hover {
   background-color: hsl(1, 39%, 42%);
   color: hsl(51, 20%, 93%);
   box-shadow: 0 2px hsl(51, 20%, 93%);
   transform: translateY(-0.25rem);
   font-weight: 800;
 }
-.primary-button:active {
+.primary-button:active, .secondary-button:active {
   transform: translateY(0);
   background-color: hsl(37, 95%, 55%);
   color: hsl(1, 39%, 42%);
   box-shadow: none;
+}
+
+.secondary-button {
+  background-color: hsl(1, 39%, 42%);
+  color: hsl(51, 20%, 93%);
 }
 
 #team-up {
@@ -84,6 +89,7 @@ body {
   text-decoration-thickness: 10px;
 }
 #team-up .content-wrapper ul {
+  align-self: flex-end;
   display: flex;
   flex-direction: column;
   gap: 2rem;

@@ -5,6 +5,7 @@ import About from './components/about.jsx';
 import Services from './components/services.jsx';
 import Testimonials from './components/testimonials.jsx';
 import Teamup from './components/teamup.jsx';
+import Form from './components/form.jsx';
 
 function App() {
   return (
@@ -14,8 +15,8 @@ function App() {
       <About />
       <Teamup /> 
       <Services />
-      {/*Team up with me page is fooked on mobile and missing proper styling for now */}
-      <Testimonials /> 
+    <Testimonials /> 
+    <Form />
     </>
   );
 }

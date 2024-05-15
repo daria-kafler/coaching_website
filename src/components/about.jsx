@@ -4,12 +4,12 @@ export default function About() {
       <section id="about">
         <div className="content-wrapper">
           <div className="text-content">
-            <h1>Does this sound familiar</h1>
+            <h1>Does this sound familiar?</h1>
             <ul>
               <li>
-                You're tired of diets that ban your favourite foods and want a sustainable approach to nutrition. You
-                want to transform your body without spending hours doing cardio at the gym.
-              </li>
+                You're tired of diets that ban your favourite foods and want a sustainable approach to nutrition.{' '}
+              </li>{' '}
+              <li> You want to transform your body without spending hours doing cardio at the gym.</li>
               <li>
                 You aim to be a positive, healthy role model for your loved ones but struggle to prioritise self-care.
               </li>
