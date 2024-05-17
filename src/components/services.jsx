@@ -11,13 +11,12 @@ export default function Services() {
               <h3 className="service-name">Ad Hoc Chat</h3>
               <p className="service-text">
                 Check-in when you need a "rubber duck" to discuss challenges and find solutions together. These can be
-                anywhere from 30 min to 90 min long, and can be done via phone, video or{' '}
-                <span style={{ textDecoration: 'underline dashed 1px' }}>
-                  <a className="tooltip-anchor">walk & talk</a>
-                </span>
+                anywhere from 30 min to 90 min long, and can be done via phone, video or walk & talk.<a className="tooltip-anchor">INFO</a>
               </p>
               <Tooltip anchorSelect=".tooltip-anchor" place="bottom">
-                London City, Camden, Islington or Hackney areas
+                I’ll be happy to join you in the London City, Camden, Islington, or Hackney areas.Whether it’s taking a
+                walk or settling in on a park bench, fresh air and vitamin D are recognized to improve mood and brain
+                function, helping you work on your goals in a relaxed and refreshed way!
               </Tooltip>
             </li>
             <li className="single-service">

@@ -4,6 +4,7 @@
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  letter-spacing: 2px;
 }
 
 img,
@@ -14,7 +15,7 @@ svg {
 
 body {
   background-color: hsl(347, 91%, 46%);
-  font-family: "Inconsolata", monospace;
+  font-family: "Karla", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   color: hsl(35, 100%, 91%);
@@ -29,7 +30,7 @@ body {
   padding: 1rem 2rem !important;
   align-items: center;
   display: flex;
-  font-family: "Inconsolata", monospace;
+  font-family: "Karla", sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
   border-radius: 100vw;
@@ -43,6 +44,7 @@ body {
   box-shadow: 0 2px hsl(35, 100%, 91%);
   transform: translateY(-0.25rem);
   font-weight: 800;
+  color: hsl(35, 100%, 91%);
 }
 .primary-button:active, .secondary-button:active {
   transform: translateY(0);
@@ -62,7 +64,7 @@ body {
   display: grid;
   place-content: center;
   background-color: hsl(35, 100%, 91%);
-  color: hsl(89, 29%, 34%);
+  color: hsl(347, 91%, 46%);
   overflow: hidden;
 }
 #about .content-wrapper {

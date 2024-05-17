@@ -50,7 +50,7 @@ export default function Navigation() {
             <path d="M 3 9 A 1.0001 1.0001 0 1 0 3 11 L 47 11 A 1.0001 1.0001 0 1 0 47 9 L 3 9 z M 3 24 A 1.0001 1.0001 0 1 0 3 26 L 47 26 A 1.0001 1.0001 0 1 0 47 24 L 3 24 z M 3 39 A 1.0001 1.0001 0 1 0 3 41 L 47 41 A 1.0001 1.0001 0 1 0 47 39 L 3 39 z"></path>
           </svg>
           {showModal && (
-            <div className="modal-overlay">
+            <div data-aos="fade-left" data-aos-duration="500" className="modal-overlay">
               <div className="modal">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -62,16 +62,16 @@ export default function Navigation() {
                   <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
                 </svg>
                 <div className="modal-content">
-                  <a data-aos="fade-left" data-aos-duration='1000' onClick={closeModal} href="#about">
+                  <a onClick={closeModal} href="#about">
                     About
                   </a>
-                  <a data-aos="fade-up" data-aos-duration='1000' onClick={closeModal} href="#products">
+                  <a onClick={closeModal} href="#products">
                     Products
                   </a>
-                  <a data-aos="fade-down" data-aos-duration='1000' onClick={closeModal} href="#testimonials">
+                  <a onClick={closeModal} href="#testimonials">
                     Testimonials
                   </a>
-                  <a data-aos="fade-right" data-aos-duration='1000' onClick={closeModal} href="#form">
+                  <a onClick={closeModal} href="#form">
                     Get in touch
                   </a>
                 </div>

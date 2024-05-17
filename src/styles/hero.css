@@ -43,6 +43,7 @@ body {
   box-shadow: 0 2px hsl(35, 100%, 91%);
   transform: translateY(-0.25rem);
   font-weight: 800;
+  color: hsl(35, 100%, 91%);
 }
 .primary-button:active, .secondary-button:active {
   transform: translateY(0);
@@ -70,7 +71,7 @@ body {
 }
 #hero .overlay {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.45);
   height: 100%;
   width: 100%;
   z-index: 2;

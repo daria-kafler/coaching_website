@@ -1,9 +1,4 @@
 // ! colours
-// $clr--neutral: hsla(51, 20, 93, 100%);
-// $clr--primary: hsla(89, 29%, 34%, 100%); // stee-blue
-// $clr--secondary: hsla(120, 10, 20, 100%);
-// $clr--accent: hsla(37, 95, 55, 100%);
-
 $clr--neutral: hsla(35, 100%, 91%, 100%); // coral-reef
 $clr--primary: hsl(347, 91%, 46%, 100%);
 $clr--secondary: hsla(89, 29%, 34%, 100%); // lunar-green
@@ -11,7 +6,7 @@ $clr--accent: hsla(250, 78%, 11%, 100%); // granny-smith
 
 // ! fonts
 // family
-$ff-base: 'Inconsolata', monospace;
+$ff-base: 'Karla', sans-serif;
 
 // weight
 $fw-light: 200;
@@ -55,6 +50,7 @@ $ssp-fs: $fs-200;
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  letter-spacing: 2px;
 }
 
 img,
