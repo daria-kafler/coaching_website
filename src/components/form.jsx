@@ -8,6 +8,10 @@ const formQuestions = [...questions];
 export default function Form() {
   const { steps, currentStepIndex, currentStep, isFirstStep, isLastStep, back, next } = useMultistepForm(formQuestions);
 
+  // add onsubmit function for the form
+  // have the formdata object/array state here
+  // do validation
+
   return (
     <>
       <section id="form">
@@ -15,6 +19,12 @@ export default function Form() {
           <h1 className="form-title">
             Ready to take the next step? <br /> Book your first chat for free.
           </h1>
+          <div className="progress">
+            <div className="progress-bar" style={{ width: `${(currentStepIndex / (steps.length - 1)) * 100}%` }}></div>
+            <div className="nominal-progress">
+              {currentStepIndex + 1} / {steps.length}
+            </div>
+          </div>
           <form className="form-field">
             <FormQuestion currentStep={currentStep} />
             <div className="prev-next-buttons">
@@ -27,7 +37,6 @@ export default function Form() {
                 {isLastStep ? 'Finish' : 'Next'}
               </button>
             </div>
-            <div className="progress" style={{ width: `${(currentStepIndex / (steps.length - 1)) * 100}%` }}></div>
           </form>
         </div>
       </section>

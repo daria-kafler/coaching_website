@@ -13,16 +13,16 @@ svg {
 }
 
 body {
-  background-color: hsl(1, 39%, 42%);
+  background-color: hsl(347, 91%, 46%);
   font-family: "Inconsolata", monospace;
   font-size: 1rem;
   font-weight: 400;
-  color: hsl(51, 20%, 93%);
+  color: hsl(35, 100%, 91%);
   line-height: 1.5;
   position: relative;
 }
 
-.primary-button {
+.primary-button, .secondary-button {
   height: 2rem;
   width: -moz-max-content;
   width: max-content;
@@ -34,23 +34,26 @@ body {
   font-weight: 400;
   border-radius: 100vw;
   border: none;
-  background-color: hsl(37, 95%, 55%);
-  color: hsl(120, 10%, 20%);
+  background-color: hsl(347, 91%, 46%);
+  color: hsl(35, 100%, 91%);
   cursor: pointer;
   transition: all 0.25s ease;
 }
-.primary-button:hover {
-  background-color: hsl(1, 39%, 42%);
-  color: hsl(51, 20%, 93%);
-  box-shadow: 0 2px hsl(51, 20%, 93%);
+.primary-button:hover, .secondary-button:hover {
+  box-shadow: 0 2px hsl(35, 100%, 91%);
   transform: translateY(-0.25rem);
   font-weight: 800;
 }
-.primary-button:active {
+.primary-button:active, .secondary-button:active {
   transform: translateY(0);
-  background-color: hsl(37, 95%, 55%);
-  color: hsl(1, 39%, 42%);
+  background-color: hsl(347, 91%, 46%);
+  color: hsl(35, 100%, 91%);
   box-shadow: none;
+}
+
+.secondary-button {
+  background-color: hsl(347, 91%, 46%);
+  color: hsl(35, 100%, 91%);
 }
 
 #hero {
@@ -61,10 +64,19 @@ body {
   min-height: 100vh;
   width: 100%;
   position: relative;
+  z-index: 1;
   display: grid;
   place-content: center;
 }
+#hero .overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.35);
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
 #hero .content-wrapper {
+  z-index: 100;
   max-width: 1200px;
   padding-top: 37.5px;
   padding-inline: 4rem;

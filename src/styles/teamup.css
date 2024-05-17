@@ -13,11 +13,11 @@ svg {
 }
 
 body {
-  background-color: hsl(1, 39%, 42%);
+  background-color: hsl(347, 91%, 46%);
   font-family: "Inconsolata", monospace;
   font-size: 1rem;
   font-weight: 400;
-  color: hsl(51, 20%, 93%);
+  color: hsl(35, 100%, 91%);
   line-height: 1.5;
   position: relative;
 }
@@ -34,90 +34,82 @@ body {
   font-weight: 400;
   border-radius: 100vw;
   border: none;
-  background-color: hsl(37, 95%, 55%);
-  color: hsl(120, 10%, 20%);
+  background-color: hsl(347, 91%, 46%);
+  color: hsl(35, 100%, 91%);
   cursor: pointer;
   transition: all 0.25s ease;
 }
 .primary-button:hover, .secondary-button:hover {
-  background-color: hsl(1, 39%, 42%);
-  color: hsl(51, 20%, 93%);
-  box-shadow: 0 2px hsl(51, 20%, 93%);
+  box-shadow: 0 2px hsl(35, 100%, 91%);
   transform: translateY(-0.25rem);
   font-weight: 800;
+  color: hsl(35, 100%, 91%);
 }
 .primary-button:active, .secondary-button:active {
   transform: translateY(0);
-  background-color: hsl(37, 95%, 55%);
-  color: hsl(1, 39%, 42%);
+  background-color: hsl(347, 91%, 46%);
+  color: hsl(35, 100%, 91%);
   box-shadow: none;
 }
 
 .secondary-button {
-  background-color: hsl(1, 39%, 42%);
-  color: hsl(51, 20%, 93%);
+  background-color: hsl(347, 91%, 46%);
+  color: hsl(35, 100%, 91%);
 }
 
 #team-up {
-  position: relative;
-  min-height: 100vh;
+  min-height: 70vh;
   width: 100%;
   display: grid;
   place-content: center;
 }
-#team-up img {
-  position: absolute;
-  width: 400px;
-  top: 50%;
-  left: 10%;
-  transform: translateY(-50%);
-  opacity: 0.75;
-  z-index: -1;
-}
 #team-up .content-wrapper {
   max-width: 1200px;
   padding: 4rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
+  display: grid;
+  gap: 2rem;
 }
 #team-up .content-wrapper h1 {
+  grid-column-start: 1;
   font-size: 2.5rem;
-  align-self: center;
-  -webkit-text-decoration: underline wavy 10px hsl(37, 95%, 55%);
-          text-decoration: underline wavy 10px hsl(37, 95%, 55%);
+  -webkit-text-decoration: underline wavy 10px hsl(250, 78%, 11%);
+          text-decoration: underline wavy 10px hsl(250, 78%, 11%);
+  text-underline-offset: 20px;
   text-decoration-thickness: 10px;
+  margin-bottom: 2rem;
 }
-#team-up .content-wrapper ul {
-  align-self: flex-end;
+#team-up .content-wrapper img {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  width: 600px;
+  float: left;
+}
+#team-up .content-wrapper .text-content {
+  grid-row-start: 2;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  width: 70%;
-  list-style: none;
 }
 
 @media (max-width: 675px) {
-  #team-up img {
-    position: absolute;
-    width: 200px;
-    top: 15%;
-    opacity: 0.75;
-    z-index: -1;
-  }
   #team-up .content-wrapper {
-    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
     padding: 4rem 2rem;
     gap: 1rem;
     z-index: 1000;
   }
+  #team-up .content-wrapper img {
+    width: 300px;
+    top: 15%;
+    left: 0;
+    opacity: 1;
+    z-index: -1;
+  }
   #team-up .content-wrapper h1 {
     font-size: 1.375rem;
-    text-decoration: unset;
   }
-  #team-up .content-wrapper ul {
-    padding: unset;
-    width: 100%;
+  #team-up .content-wrapper .text-content {
     font-size: 0.875rem;
   }
 }/*# sourceMappingURL=teamup.css.map */

@@ -1,7 +1,8 @@
 @import 'globals';
 
 #testimonials {
-  background-color: $clr--secondary;
+  background-color: $clr--neutral;
+  color: $clr--primary;
 
   min-height: 70vh;
 
@@ -49,7 +50,7 @@
 }
 
 .slick-dots > li > button:before {
-  color: $clr--neutral;
+  color: $clr--primary;
 }
 .slick-dots > li.slick-active > button:before {
   color: $clr--accent;

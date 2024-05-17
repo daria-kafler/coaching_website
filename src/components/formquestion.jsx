@@ -1,4 +1,16 @@
+import { useState } from 'react';
+
 export default function FormQuestion({ currentStep }) {
+
+  const [formData, setFormData] = useState([])
+
+  function change(e) {
+    setFormData(e.value)
+  }
+
+  // give each question unique id so you can add them to the state object/array 
+  // check sendgrid to see what type of data they expect to initiate the email
+
   return (
     <>
       <div className="single-question">
@@ -13,9 +25,9 @@ export default function FormQuestion({ currentStep }) {
         ) : (
           <label>
             {currentStep.componentType === 'input' ? (
-              <input type={currentStep.answerType}></input>
+              <input autoFocus type={currentStep.answerType}></input>
             ) : (
-              <textarea></textarea>
+              <textarea autoFocus></textarea>
             )}
           </label>
         )}

@@ -13,16 +13,16 @@ svg {
 }
 
 body {
-  background-color: hsl(1, 39%, 42%);
+  background-color: hsl(347, 91%, 46%);
   font-family: "Inconsolata", monospace;
   font-size: 1rem;
   font-weight: 400;
-  color: hsl(51, 20%, 93%);
+  color: hsl(35, 100%, 91%);
   line-height: 1.5;
   position: relative;
 }
 
-.primary-button {
+.primary-button, .secondary-button {
   height: 2rem;
   width: -moz-max-content;
   width: max-content;
@@ -34,23 +34,27 @@ body {
   font-weight: 400;
   border-radius: 100vw;
   border: none;
-  background-color: hsl(37, 95%, 55%);
-  color: hsl(120, 10%, 20%);
+  background-color: hsl(347, 91%, 46%);
+  color: hsl(35, 100%, 91%);
   cursor: pointer;
   transition: all 0.25s ease;
 }
-.primary-button:hover {
-  background-color: hsl(1, 39%, 42%);
-  color: hsl(51, 20%, 93%);
-  box-shadow: 0 2px hsl(51, 20%, 93%);
+.primary-button:hover, .secondary-button:hover {
+  box-shadow: 0 2px hsl(35, 100%, 91%);
   transform: translateY(-0.25rem);
   font-weight: 800;
+  color: hsl(35, 100%, 91%);
 }
-.primary-button:active {
+.primary-button:active, .secondary-button:active {
   transform: translateY(0);
-  background-color: hsl(37, 95%, 55%);
-  color: hsl(1, 39%, 42%);
+  background-color: hsl(347, 91%, 46%);
+  color: hsl(35, 100%, 91%);
   box-shadow: none;
+}
+
+.secondary-button {
+  background-color: hsl(347, 91%, 46%);
+  color: hsl(35, 100%, 91%);
 }
 
 .nav-wrapper {
@@ -66,10 +70,10 @@ body {
 
 a {
   text-decoration: none;
-  color: hsl(51, 20%, 93%);
+  color: hsl(35, 100%, 91%);
 }
 a:hover {
-  color: hsl(37, 95%, 55%);
+  color: hsl(347, 91%, 46%);
 }
 
 nav {
@@ -96,26 +100,66 @@ nav ul {
 nav .menu-icon {
   width: 40px;
   display: none;
-  fill: hsl(51, 20%, 93%);
+  fill: hsl(35, 100%, 91%);
   cursor: pointer;
 }
 nav .menu-icon:hover {
-  fill: hsl(37, 95%, 55%);
+  fill: hsl(347, 91%, 46%);
 }
 
 /* CSS rules for small devices */
 @media (max-width: 675px) {
   nav {
     width: 100%;
-    min-width: 0;
+    height: 56.25px;
+  }
+  nav .logo {
+    font-size: 0.875rem;
   }
   nav ul {
     display: none;
   }
-  nav button {
+  nav .primary-button, nav .secondary-button {
     display: none !important;
   }
   nav .menu-icon {
     display: initial;
+    width: 20px;
+    margin-inline: 0.5rem;
   }
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(250, 78%, 11%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+}
+.modal .modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.75rem;
+  font-weight: 400;
+  height: 100%;
+}
+.modal .modal-content a:active {
+  color: hsl(35, 100%, 91%);
+  scale: 1.1;
+}
+.modal .menu-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
 }/*# sourceMappingURL=navigation.css.map */

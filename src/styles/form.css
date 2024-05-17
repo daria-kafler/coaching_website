@@ -13,11 +13,11 @@ svg {
 }
 
 body {
-  background-color: hsl(1, 39%, 42%);
+  background-color: hsl(347, 91%, 46%);
   font-family: "Inconsolata", monospace;
   font-size: 1rem;
   font-weight: 400;
-  color: hsl(51, 20%, 93%);
+  color: hsl(35, 100%, 91%);
   line-height: 1.5;
   position: relative;
 }
@@ -34,63 +34,80 @@ body {
   font-weight: 400;
   border-radius: 100vw;
   border: none;
-  background-color: hsl(37, 95%, 55%);
-  color: hsl(120, 10%, 20%);
+  background-color: hsl(347, 91%, 46%);
+  color: hsl(35, 100%, 91%);
   cursor: pointer;
   transition: all 0.25s ease;
 }
 .primary-button:hover, .secondary-button:hover {
-  background-color: hsl(1, 39%, 42%);
-  color: hsl(51, 20%, 93%);
-  box-shadow: 0 2px hsl(51, 20%, 93%);
+  box-shadow: 0 2px hsl(35, 100%, 91%);
   transform: translateY(-0.25rem);
   font-weight: 800;
+  color: hsl(35, 100%, 91%);
 }
 .primary-button:active, .secondary-button:active {
   transform: translateY(0);
-  background-color: hsl(37, 95%, 55%);
-  color: hsl(1, 39%, 42%);
+  background-color: hsl(347, 91%, 46%);
+  color: hsl(35, 100%, 91%);
   box-shadow: none;
 }
 
 .secondary-button {
-  background-color: hsl(1, 39%, 42%);
-  color: hsl(51, 20%, 93%);
+  background-color: hsl(347, 91%, 46%);
+  color: hsl(35, 100%, 91%);
 }
 
 #form {
-  min-height: 100vh;
+  min-height: 80vh;
   width: 100%;
   display: flex;
-  place-content: center;
-  background-color: hsl(37, 95%, 55%);
-  color: hsl(120, 10%, 20%);
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(250, 78%, 11%);
+  color: hsl(35, 100%, 91%);
 }
 #form .content-wrapper {
-  min-height: 100%;
   max-width: 1200px;
   min-width: 1200px;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  min-height: inherit;
   padding: 4rem;
   display: flex;
+  gap: 1rem;
   flex-direction: column;
+  justify-content: space-between;
 }
 #form .content-wrapper .form-title {
   font-size: 1.75rem;
 }
+#form .content-wrapper .progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+#form .content-wrapper .progress .progress-bar {
+  height: 5px;
+  background-color: hsl(347, 91%, 46%);
+  border-radius: inherit;
+  transition: width 0.25s ease-in-out;
+}
+#form .content-wrapper .progress .nominal-progress {
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
 #form .content-wrapper .form-field {
-  min-height: 100%;
-  min-width: 100%;
-  flex-grow: 1;
   position: relative;
-  padding: 10rem 2rem;
   border-radius: 1rem;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 #form .content-wrapper .form-field .single-question {
   display: flex;
   flex-direction: column;
+  margin-bottom: 2rem;
 }
 #form .content-wrapper .form-field .single-question h1 {
   font-size: 1.375rem;
@@ -105,9 +122,12 @@ body {
   background-color: inherit;
   padding: 12px 50px 12px 0;
   border: none;
-  border-bottom: 2px solid hsl(120, 10%, 20%);
+  border-bottom: 2px solid hsl(89, 29%, 34%);
   font-size: 1.125rem;
-  color: hsl(120, 10%, 20%);
+  color: hsl(35, 100%, 91%);
+}
+#form .content-wrapper .form-field .single-question textarea {
+  width: 50%;
 }
 #form .content-wrapper .form-field .single-question .non-text {
   font-size: 1.125rem;
@@ -120,17 +140,7 @@ body {
   padding-block: 0 2rem;
   display: flex;
   flex-direction: row;
-  margin-top: auto;
 }
 #form .content-wrapper .form-field .prev-next-buttons button {
   margin-right: 1rem;
-}
-#form .content-wrapper .form-field .progress {
-  position: absolute;
-  top: 5px;
-  left: 0;
-  height: 5px;
-  background-color: hsl(1, 39%, 42%);
-  border-radius: inherit;
-  transition: width 0.25s ease-in-out;
 }/*# sourceMappingURL=form.css.map */

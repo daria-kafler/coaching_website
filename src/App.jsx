@@ -6,6 +6,8 @@ import Services from './components/services.jsx';
 import Testimonials from './components/testimonials.jsx';
 import Teamup from './components/teamup.jsx';
 import Form from './components/form.jsx';
+import Footer from './components/footer.jsx';
+import 'react-tooltip/dist/react-tooltip.css';
 
 function App() {
   return (
@@ -13,10 +15,11 @@ function App() {
       <Navigation />
       <Hero />
       <About />
-      <Teamup /> 
+      <Teamup />
       <Services />
-    <Testimonials /> 
-    <Form />
+      <Testimonials />
+      <Form />
+      <Footer />
     </>
   );
 }

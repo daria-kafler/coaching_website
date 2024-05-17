@@ -17,7 +17,7 @@ a {
   color: $clr--neutral;
 
   &:hover {
-    color: $clr--accent;
+    color: $clr--primary;
   }
 }
 
@@ -51,7 +51,7 @@ nav {
     cursor: pointer;
 
     &:hover {
-      fill: $clr--accent;
+      fill: $clr--primary;
     }
   }
 }
@@ -60,18 +60,64 @@ nav {
 @media (max-width: 675px) {
   nav {
     width: 100%;
-    min-width: 0;
+    height: $__nav-height * 0.75;
+
+    .logo {
+      font-size: $ssp-fs;
+    }
 
     ul {
       display: none;
     }
 
-    button {
+    .primary-button {
       display: none !important;
     }
 
     .menu-icon {
       display: initial;
+      width: 20px;
+      margin-inline: 0.5rem;
     }
   }
 }
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $clr--accent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: $ssh1-fs;
+    font-weight: $fw-regular;
+    height: 100%;
+
+    a:active {
+      color: $clr--neutral;
+      scale: 1.1;
+    }
+  }
+  .menu-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+  }
+}
+
+

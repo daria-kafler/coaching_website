@@ -1,45 +1,64 @@
 @import 'globals';
 
 #form {
-  min-height: 100vh;
+  min-height: 80vh;
   width: 100%;
 
   display: flex;
-  place-content: center;
+  justify-content: center;
+  align-items: center;
 
   background-color: $clr--accent;
-  color: $clr--secondary;
+  color: $clr--neutral;
 
   .content-wrapper {
-    min-height: 100%;
-
     max-width: $max-width;
     min-width: $max-width;
+    max-height: fit-content;
+    min-height: inherit;
 
     padding: 4rem;
     display: flex;
+    gap: 1rem;
     flex-direction: column;
+    justify-content: space-between;
 
     .form-title {
       font-size: $lsh2-fs;
     }
 
-    .form-field {
-      min-height: 100%;
-      min-width: 100%;
-      flex-grow: 1;
 
+    .progress {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+
+      .progress-bar {
+        height: 5px;
+        background-color: $clr--primary;
+        border-radius: inherit;
+        transition: width 0.25s ease-in-out;
+      }
+      .nominal-progress {
+        min-width: fit-content;
+      }
+    }
+
+
+    .form-field {
       position: relative;
-      padding: 10rem 2rem;
       border-radius: 1rem;
-      margin: 0 auto;
 
       display: flex;
       flex-direction: column;
 
+      flex-grow: 1;
+
       .single-question {
         display: flex;
         flex-direction: column;
+        margin-bottom: 2rem;
 
         h1 {
           font-size: $lsh3-fs;
@@ -57,7 +76,11 @@
           border: none;
           border-bottom: 2px solid $clr--secondary;
           font-size: $lsp-fs;
-          color: $clr--secondary;
+          color: $clr--neutral;
+        }
+
+        textarea {
+          width: 50%;
         }
 
         .non-text {
@@ -73,21 +96,10 @@
         padding-block: 0 2rem;
         display: flex;
         flex-direction: row;
-        margin-top: auto;
 
         button {
           margin-right: 1rem;
         }
-      }
-
-      .progress {
-        position: absolute;
-        top: 5px;
-        left: 0;
-        height: 5px;
-        background-color: $clr--primary;
-        border-radius: inherit;
-        transition: width 0.25s ease-in-out;
       }
     }
   }
