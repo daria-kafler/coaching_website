@@ -9,7 +9,7 @@ const allTestimonials = testimonials;
 function CustomSlide({ singleTestimonial }) {
   return (
     <>
-      <div className="single-testimonial" style={{ width: '400px', margin: '0 auto' }}>
+      <div className="single-testimonial">
         <div className="card-top">
           {singleTestimonial.img ? (
             <img src={singleTestimonial.img} alt="" />

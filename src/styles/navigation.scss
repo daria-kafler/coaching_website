@@ -58,26 +58,30 @@ nav {
 
 /* CSS rules for small devices */
 @media (max-width: 675px) {
-  nav {
-    width: 100%;
-    height: $__nav-height * 0.75;
+  .nav-wrapper {
+    position: fixed;
+    z-index: 10000;
+    nav {
+      width: 100%;
+      height: $__nav-height * 0.75;
 
-    .logo {
-      font-size: $ssp-fs;
-    }
+      .logo {
+        font-size: $ssp-fs;
+      }
 
-    ul {
-      display: none;
-    }
+      ul {
+        display: none;
+      }
 
-    .primary-button {
-      display: none !important;
-    }
+      .primary-button {
+        display: none !important;
+      }
 
-    .menu-icon {
-      display: initial;
-      width: 20px;
-      margin-inline: 0.5rem;
+      .menu-icon {
+        display: initial;
+        width: 20px;
+        margin-inline: 0.5rem;
+      }
     }
   }
 }
@@ -86,8 +90,8 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: $clr--accent;
   display: flex;
   justify-content: center;
@@ -95,14 +99,15 @@ nav {
 }
 
 .modal {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 
   .modal-content {
     display: flex;
+    gap: 2rem;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     font-size: $ssh1-fs;
     font-weight: $fw-regular;
     height: 100%;

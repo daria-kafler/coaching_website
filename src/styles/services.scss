@@ -2,15 +2,13 @@
 
 #products {
   min-height: 60vh;
+
   background-color: $clr--secondary;
   color: $clr--neutral;
 
-  width: 100%;
-
-  position: relative;
-
   display: grid;
   place-content: center;
+  position: relative;
 
   .content-wrapper {
     max-width: $max-width;
@@ -18,20 +16,22 @@
 
     display: grid;
     place-items: center;
-
     gap: 5rem;
 
     h1 {
       font-size: $lsh1-fs;
       width: 100%;
       text-align: right;
+
+      @media (max-width: 675px) {
+        font-size: $ssh2-fs;
+      }
     }
 
     .services-list {
       padding: 0;
       display: grid;
       grid-auto-flow: column;
-      list-style: none;
       gap: 4rem;
 
       .single-service {
@@ -43,6 +43,18 @@
         h3 {
           font-size: $lsh3-fs;
         }
+
+        .tooltip-icon {
+          display: inline-block;
+          fill: $clr--primary;
+          width: 12px;
+          margin-bottom: 5px;
+
+          &:hover {
+            cursor: pointer;
+            fill: $clr--accent;
+          }
+        }
       }
     }
   }
@@ -50,16 +62,11 @@
 
 @media (max-width: 1024px) {
   #products {
-    min-height: 60vh;
     .content-wrapper {
       display: flex;
       flex-direction: column;
       padding: 4rem 2rem;
       gap: 2rem;
-
-      h1 {
-        font-size: $ssh2-fs;
-      }
 
       .services-list {
         padding: 0;

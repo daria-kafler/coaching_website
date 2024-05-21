@@ -4,6 +4,7 @@
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  letter-spacing: 2px;
 }
 
 img,
@@ -14,7 +15,7 @@ svg {
 
 body {
   background-color: hsl(347, 91%, 46%);
-  font-family: "Inconsolata", monospace;
+  font-family: "Karla", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   color: hsl(35, 100%, 91%);
@@ -29,7 +30,7 @@ body {
   padding: 1rem 2rem !important;
   align-items: center;
   display: flex;
-  font-family: "Inconsolata", monospace;
+  font-family: "Karla", sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
   border-radius: 100vw;
@@ -57,14 +58,23 @@ body {
   color: hsl(35, 100%, 91%);
 }
 
+#website-by {
+  display: block;
+  padding: 0.5rem;
+  background-color: hsl(250, 78%, 11%);
+  color: hsl(35, 100%, 91%);
+  font-size: 0.5625rem;
+  text-align: right;
+  font-style: italic;
+}
+
 #products {
   min-height: 60vh;
   background-color: hsl(89, 29%, 34%);
   color: hsl(35, 100%, 91%);
-  width: 100%;
-  position: relative;
   display: grid;
   place-content: center;
+  position: relative;
 }
 #products .content-wrapper {
   max-width: 1200px;
@@ -78,11 +88,15 @@ body {
   width: 100%;
   text-align: right;
 }
+@media (max-width: 675px) {
+  #products .content-wrapper h1 {
+    font-size: 1.375rem;
+  }
+}
 #products .content-wrapper .services-list {
   padding: 0;
   display: grid;
   grid-auto-flow: column;
-  list-style: none;
   gap: 4rem;
 }
 #products .content-wrapper .services-list .single-service {
@@ -94,19 +108,23 @@ body {
 #products .content-wrapper .services-list .single-service h3 {
   font-size: 1.375rem;
 }
+#products .content-wrapper .services-list .single-service .tooltip-icon {
+  display: inline-block;
+  fill: hsl(347, 91%, 46%);
+  width: 12px;
+  margin-bottom: 5px;
+}
+#products .content-wrapper .services-list .single-service .tooltip-icon:hover {
+  cursor: pointer;
+  fill: hsl(250, 78%, 11%);
+}
 
 @media (max-width: 1024px) {
-  #products {
-    min-height: 60vh;
-  }
   #products .content-wrapper {
     display: flex;
     flex-direction: column;
     padding: 4rem 2rem;
     gap: 2rem;
-  }
-  #products .content-wrapper h1 {
-    font-size: 1.375rem;
   }
   #products .content-wrapper .services-list {
     padding: 0;

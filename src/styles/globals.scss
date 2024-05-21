@@ -109,3 +109,17 @@ body {
   background-color: $clr--primary;
   color: $clr--neutral;
 }
+
+#website-by {
+  display: block;
+  padding: 0.5rem;
+
+  background-color: $clr--accent;
+  color: $clr--neutral;
+  
+  font-size: calc($lsp-fs * 0.5);
+  text-align: right;
+  font-style: italic;
+
+
+}

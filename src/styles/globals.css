@@ -56,4 +56,14 @@ body {
 .secondary-button {
   background-color: hsl(347, 91%, 46%);
   color: hsl(35, 100%, 91%);
+}
+
+#website-by {
+  display: block;
+  padding: 0.5rem;
+  background-color: hsl(250, 78%, 11%);
+  color: hsl(35, 100%, 91%);
+  font-size: 0.5625rem;
+  text-align: right;
+  font-style: italic;
 }/*# sourceMappingURL=globals.css.map */

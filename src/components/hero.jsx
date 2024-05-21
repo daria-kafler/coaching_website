@@ -1,5 +1,3 @@
-import bgImg from '../assets/Daria-bike.jpg'
-
 export default function Hero() {
   return (
     <>

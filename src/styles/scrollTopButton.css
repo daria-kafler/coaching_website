@@ -68,74 +68,31 @@ body {
   font-style: italic;
 }
 
-footer {
-  padding: 2rem;
-  border-top: dashed 0.1607142857rem hsl(35, 100%, 91%);
-  background-color: hsl(250, 78%, 11%);
-  color: hsl(35, 100%, 91%);
-  font-size: 0.84375rem;
+#scroll-to-top .scroll-to-top-btn {
+  background-color: hsl(35, 100%, 91%);
+  color: hsl(347, 91%, 46%);
+  border: dashed 1px hsl(250, 78%, 11%);
+  border-radius: 50%;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 40px;
+  height: 40px;
+  font-size: 1.125rem;
+  transition: all 0.5s ease;
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(180deg);
+  fill: hsl(250, 78%, 11%);
 }
-footer .left {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-footer .left .copyright {
-  display: flex;
-  gap: 0.5rem;
-}
-footer .left .copyright #copyright-icon {
-  fill: hsl(35, 100%, 91%);
-  width: 0.84375rem;
-}
-footer .left .to-home {
-  font-size: 2.5rem;
-  width: -moz-min-content;
-  width: min-content;
-}
-footer .right {
-  width: 50%;
-  display: flex;
-  justify-content: space-evenly;
-}
-footer .right p {
-  opacity: 0.5;
-  font-size: 0.95625rem;
-}
-footer .right .company,
-footer .right .legal,
-footer .right .socials {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-footer .right .socials .icons {
-  display: flex;
-  gap: 1rem;
-}
-footer .right .socials .icons .social-icon {
-  fill: hsl(35, 100%, 91%);
-  width: 24px;
-}
-footer .right .socials .icons .social-icon:hover {
-  fill: hsl(347, 91%, 46%);
+#scroll-to-top .scroll-to-top-btn:hover {
+  cursor: pointer;
+  scale: 1.1;
 }
 
 @media (max-width: 675px) {
-  footer {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  #scroll-to-top {
+    display: none;
   }
-  footer .left, footer .right {
-    width: 100%;
-  }
-  footer .right {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-}/*# sourceMappingURL=footer.css.map */
+}/*# sourceMappingURL=scrollTopButton.css.map */

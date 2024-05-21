@@ -53,4 +53,9 @@ export const questions = [
     answerType: 'text-area',
     answerOptions: null,
   },
-];
+]
+
+// no need to tweak this is just adding 'id' property to each question automatically to dynamically create and update the form answers
+questions.forEach((question, index) => {
+  question.id = index + 1
+})

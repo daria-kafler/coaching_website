@@ -1,0 +1,38 @@
+@import 'globals';
+
+#scroll-to-top {
+  .scroll-to-top-btn {
+    background-color: $clr--neutral;
+    color: $clr--primary;
+    border: dashed 1px $clr--accent;
+    border-radius: 50%;
+
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+
+    width: 40px;
+    height: 40px;
+
+    font-size: $lsp-fs;
+    transition: all 0.5s ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+    fill: $clr--accent;
+    
+    &:hover {
+      cursor: pointer;
+      scale: 1.1;
+    };
+  }
+}
+
+@media (max-width: 675px) {
+  #scroll-to-top {
+    display: none;
+  }
+  
+}

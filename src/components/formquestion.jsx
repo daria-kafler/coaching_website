@@ -1,15 +1,18 @@
-import { useState } from 'react';
-
-export default function FormQuestion({ currentStep }) {
-
-  const [formData, setFormData] = useState([])
-
-  function change(e) {
-    setFormData(e.value)
+export default function FormQuestion({ currentStep, formData, setFormData, updateFields }) {
+  
+  function updateFields(fields) {
+    setFormData((prev) => {
+      return { ...prev, ...fields };
+    });
   }
 
-  // give each question unique id so you can add them to the state object/array 
-  // check sendgrid to see what type of data they expect to initiate the email
+  const handleCheckboxChange = (option) => {
+    const updatedValue = formData[currentStep.id] || []; // Get current array or initialize as empty array
+    const updatedOptions = updatedValue.includes(option)
+      ? updatedValue.filter((item) => item !== option) // Remove if already selected
+      : [...updatedValue, option]; // Add if not already selected
+    updateFields({ [currentStep.id]: updatedOptions });
+  };
 
   return (
     <>
@@ -17,17 +20,47 @@ export default function FormQuestion({ currentStep }) {
         <h1>{currentStep.question}</h1>
         {currentStep.answerOptions !== null ? (
           currentStep.answerOptions.map((answer, index) => (
-            <label className='non-text' key={index}>
-              <input required type={currentStep.answerType} name='radio-group'/>
-              {answer}
+            <label className="non-text" key={index}>
+              {currentStep.answerType === 'checkbox' ? (
+                <>
+                  <input
+                    type="checkbox"
+                    name={`${currentStep.id}-${index}`}
+                    value={answer}
+                    checked={(formData[currentStep.id] || []).includes(answer)}
+                    onChange={() => handleCheckboxChange(answer)}
+                  />
+                  {answer}
+                </>
+              ) : (
+                <>
+                  <input
+                    type="radio"
+                    value={answer}
+                    checked={formData[currentStep.id] === answer}
+                    onChange={() => updateFields({ [currentStep.id]: answer })}
+                  />
+                  {answer}
+                </>
+              )}
             </label>
           ))
         ) : (
-          <label>
+          <label className="text">
             {currentStep.componentType === 'input' ? (
-              <input autoFocus type={currentStep.answerType}></input>
+              <input
+                type={currentStep.answerType}
+                required
+                value={formData[currentStep.id]}
+                onChange={(e) => updateFields({ [currentStep.id]: e.target.value })}
+              ></input>
             ) : (
-              <textarea autoFocus></textarea>
+              <textarea
+                autoFocus
+                required
+                value={formData[currentStep.id]}
+                onChange={(e) => updateFields({ [currentStep.id]: e.target.value })}
+              ></textarea>
             )}
           </label>
         )}

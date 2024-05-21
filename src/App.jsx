@@ -7,6 +7,7 @@ import Testimonials from './components/testimonials.jsx';
 import Teamup from './components/teamup.jsx';
 import Form from './components/form.jsx';
 import Footer from './components/footer.jsx';
+import ScrollToTopButton from './components/scrollToTopButton.jsx';
 import 'react-tooltip/dist/react-tooltip.css';
 
 function App() {
@@ -20,6 +21,12 @@ function App() {
       <Testimonials />
       <Form />
       <Footer />
+      <ScrollToTopButton />
+      <div id="website-by">
+        <a target="_blank" href="https://www.ataabatay.com/">
+          website by Ata Abatay
+        </a>
+      </div>
     </>
   );
 }
