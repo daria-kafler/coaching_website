@@ -4,7 +4,6 @@
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  letter-spacing: 2px;
 }
 
 img,
@@ -14,7 +13,6 @@ svg {
 }
 
 body {
-  background-color: hsl(347, 91%, 46%);
   font-family: "Karla", sans-serif;
   font-size: 1rem;
   font-weight: 400;

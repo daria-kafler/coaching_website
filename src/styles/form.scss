@@ -1,7 +1,7 @@
 @import 'globals';
 
 #form {
-  min-height: 80vh;
+  min-height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,7 +18,7 @@
     display: flex;
     gap: 1rem;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
 
     .form-title {
       font-size: $lsh2-fs;
@@ -103,7 +103,7 @@
 @media (max-width: 675px) {
   #form {
     overflow: hidden;
-    max-width: 100vw;
+    min-height: 80vh;
 
     .content-wrapper {
       max-width: 100%;

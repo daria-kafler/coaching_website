@@ -4,7 +4,6 @@
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  letter-spacing: 2px;
 }
 
 img,
@@ -69,7 +68,7 @@ body {
 }
 
 #form {
-  min-height: 80vh;
+  min-height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,7 +83,7 @@ body {
   display: flex;
   gap: 1rem;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
 }
 #form .content-wrapper .form-title {
   font-size: 1.75rem;
@@ -156,7 +155,7 @@ body {
 @media (max-width: 675px) {
   #form {
     overflow: hidden;
-    max-width: 100vw;
+    min-height: 80vh;
   }
   #form .content-wrapper {
     max-width: 100%;

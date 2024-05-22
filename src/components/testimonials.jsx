@@ -8,7 +8,7 @@ export default function Testimonials() {
     <>
       <section id="testimonials">
         <div className="content-wrapper">
-          <h1>Right now, I’m just a lady on the internet, so don’t listen to me. Here is what others had to say.</h1>
+          <h1>Right now, I’m just a lady on the internet, so don’t listen to me. <u>Here is what others had to say.</u></h1>
           <div className="all-testimonials">
             <TestimonialCarousel user_testimonials={user_testimonials} />
           </div>

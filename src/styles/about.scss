@@ -11,11 +11,13 @@
   color: $clr--primary;
   overflow: hidden;
 
+  clip-path: ellipse(99% 60% at 70% 60%);
+
   .content-wrapper {
     max-width: $max-width;
     padding: 4rem;
     display: grid;
-    
+
     .text-content {
       min-width: fit-content;
       display: flex;
@@ -40,6 +42,7 @@
           min-width: 250px;
           font-size: $lsp-fs;
           bottom: calc(80vh * 0.25);
+          letter-spacing: 1px;
         }
       }
     }
@@ -52,14 +55,14 @@
     .content-wrapper {
       padding: 3rem 2rem;
       display: block;
-      
+
       .text-content {
         text-align: unset;
         gap: 1rem;
         h1 {
           font-size: $ssh2-fs;
         }
-        
+
         ul {
           li {
             font-size: $ssp-fs;

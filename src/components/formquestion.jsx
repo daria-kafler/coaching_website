@@ -1,5 +1,5 @@
 export default function FormQuestion({ currentStep, formData, setFormData, updateFields }) {
-  
+
   function updateFields(fields) {
     setFormData((prev) => {
       return { ...prev, ...fields };
@@ -25,8 +25,8 @@ export default function FormQuestion({ currentStep, formData, setFormData, updat
                 <>
                   <input
                     type="checkbox"
-                    name={`${currentStep.id}-${index}`}
                     value={answer}
+                    name={currentStep.name}
                     checked={(formData[currentStep.id] || []).includes(answer)}
                     onChange={() => handleCheckboxChange(answer)}
                   />
@@ -37,6 +37,7 @@ export default function FormQuestion({ currentStep, formData, setFormData, updat
                   <input
                     type="radio"
                     value={answer}
+                    name={currentStep.name}
                     checked={formData[currentStep.id] === answer}
                     onChange={() => updateFields({ [currentStep.id]: answer })}
                   />
@@ -52,6 +53,7 @@ export default function FormQuestion({ currentStep, formData, setFormData, updat
                 type={currentStep.answerType}
                 required
                 value={formData[currentStep.id]}
+                name={currentStep.name}
                 onChange={(e) => updateFields({ [currentStep.id]: e.target.value })}
               ></input>
             ) : (
@@ -59,6 +61,7 @@ export default function FormQuestion({ currentStep, formData, setFormData, updat
                 autoFocus
                 required
                 value={formData[currentStep.id]}
+                name={currentStep.name}
                 onChange={(e) => updateFields({ [currentStep.id]: e.target.value })}
               ></textarea>
             )}

@@ -21,7 +21,7 @@
     h1 {
       font-size: $lsh1-fs;
       width: 100%;
-      text-align: right;
+      text-align: left;
 
       @media (max-width: 675px) {
         font-size: $ssh2-fs;
@@ -36,6 +36,7 @@
 
       .single-service {
         max-width: 250px;
+        min-width: 100px;
         text-align: center;
         display: grid;
         gap: 1rem;

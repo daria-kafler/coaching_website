@@ -13,6 +13,7 @@ svg {
 }
 
 body {
+  background-color: hsl(347, 91%, 46%);
   font-family: "Karla", sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -66,52 +67,44 @@ body {
   font-style: italic;
 }
 
-#hero {
-  background-image: url("../assets/Daria-bike.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50%;
-  min-height: 100vh;
+#terms {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  position: relative;
-  z-index: 1;
-  display: grid;
-  place-content: center;
-  -webkit-clip-path: ellipse(100% 60% at 66% 39%);
-          clip-path: ellipse(100% 60% at 66% 39%);
-}
-#hero .overlay {
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.45);
   height: 100%;
-  width: 100%;
-  z-index: 2;
+  z-index: 99999;
+  overflow-y: auto;
+  background-color: hsl(250, 78%, 11%);
+  color: hsl(35, 100%, 91%);
+  display: flex;
+  justify-content: center;
+  padding: 4rem;
 }
-#hero .content-wrapper {
-  z-index: 100;
+#terms .content-wrapper {
+  background-color: inherit;
+  width: 1200px;
   max-width: 1200px;
-  padding-top: 37.5px;
-  padding-inline: 4rem;
-  display: grid;
+  padding: 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
 }
-#hero .content-wrapper .hero-title {
+#terms .content-wrapper .close-terms {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 40px;
+  height: 40px;
+  fill: hsl(35, 100%, 91%);
+}
+#terms .content-wrapper h1 {
   font-size: 2.5rem;
 }
-#hero .content-wrapper .hero-text {
-  max-width: 50%;
+#terms .content-wrapper .text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   font-size: 1.125rem;
-}
-
-@media (max-width: 675px) {
-  #hero .content-wrapper {
-    padding: 2rem !important;
-  }
-  #hero .hero-title {
-    font-size: 1.75rem !important;
-  }
-  #hero .hero-text {
-    font-size: 0.875rem !important;
-    max-width: 75% !important;
-  }
-}/*# sourceMappingURL=hero.css.map */
+}/*# sourceMappingURL=terms.css.map */

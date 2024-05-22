@@ -15,24 +15,16 @@ export default function About() {
             <h1>Does this sound familiar?</h1>
             <ul>
               <li data-aos="fade-right" data-aos-duration="2000">
-                You're tired of diets that ban your favourite foods and want a sustainable approach to nutrition.
+                I’m sick of being on a diet, I want to <u>eat my favourite foods again</u>
               </li>
               <li data-aos="fade-left" data-aos-duration="2000">
-                {' '}
-                You want to transform your body without spending hours doing cardio at the gym.
-              </li>
+              I’ve been <u>doing cardio for ages</u> but don’t see any changes              </li>
               <li data-aos="fade-right" data-aos-duration="2000">
-                You aim to be a positive, healthy role model for your loved ones but struggle to prioritise self-care.
-              </li>
+              I want to be a healthy role model for my loved ones but end up <u>neglecting myself</u>              </li>
               <li data-aos="fade-left" data-aos-duration="2000">
-                You feel overwhelmed by clutter and disorganisation and need practical solutions to boost productivity.
-                You crave work-life balance but feel stuck in a cycle of overwork and burnout.
-              </li>
+              I need a better work-life balance but <u>too overwhelmed</u> to know where to start              </li>
               <li data-aos="fade-right" data-aos-duration="2000">
-                You're ready to overcome self-doubt and procrastination to unlock your full potential.
-              </li>
-              <li data-aos="fade-left" data-aos-duration="2000">
-                You have ADHD and struggle with managing your energy levels, both in your health journey and at work.
+              I want to do well at work, but I feel like <u>my ADHD is holding me back</u>
               </li>
             </ul>
           </div>

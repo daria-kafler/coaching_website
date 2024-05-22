@@ -4,9 +4,14 @@ export default function Hero() {
       <section id="hero">
         <div className="overlay"></div>
         <div className="content-wrapper">
-          <h1 className='hero-title'>Hi I'm Daria.</h1>
-          <p className='hero-text'>I help tech professionals and ADHD brains achieve sustainable health and productivity goals without resorting to extreme restrictions or passing trends, and enjoying the process.</p>
-          <a href='#about' className='primary-button'>Learn more</a>
+          <h1 className="hero-title">Hi I'm Daria.</h1>
+          <p className="hero-text">
+            help tech professionals and ADHD brains achieve sustainable health and productivity goals. <br /> No extreme
+            restrictions, no passing trends. <br /> <span><strong>Just what works.</strong></span>
+          </p>
+          <a href="#about" className="primary-button">
+            Learn more
+          </a>
         </div>
       </section>
     </>
