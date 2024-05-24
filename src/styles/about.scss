@@ -1,7 +1,8 @@
 @import 'globals';
 
 #about {
-  min-height: 60vh;
+  --height: 60vh;
+  min-height: var(--height);
   width: 100%;
 
   display: grid;
@@ -11,9 +12,9 @@
   color: $clr--primary;
   overflow: hidden;
 
-  clip-path: ellipse(99% 60% at 70% 60%);
-
   .content-wrapper {
+    width: $max-width;
+    height: var(--height);
     max-width: $max-width;
     padding: 4rem;
     display: grid;
@@ -42,7 +43,6 @@
           min-width: 250px;
           font-size: $lsp-fs;
           bottom: calc(80vh * 0.25);
-          letter-spacing: 1px;
         }
       }
     }
@@ -53,6 +53,8 @@
   #about {
     min-height: 60vh;
     .content-wrapper {
+      width: unset;
+      height: unset;
       padding: 3rem 2rem;
       display: block;
 
@@ -68,6 +70,10 @@
             font-size: $ssp-fs;
             font-weight: $fw-light;
             width: 90%;
+
+            #decorated-text {
+              display: inline-block;
+            }
           }
         }
       }

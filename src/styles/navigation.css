@@ -13,7 +13,6 @@ svg {
 }
 
 body {
-  background-color: hsl(347, 91%, 46%);
   font-family: "Karla", sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -23,14 +22,11 @@ body {
 }
 
 .primary-button, .secondary-button {
-  height: 2rem;
-  width: -moz-max-content;
-  width: max-content;
-  padding: 1rem 2rem !important;
+  padding: 1.25rem 2rem !important;
   align-items: center;
   display: flex;
   font-family: "Karla", sans-serif;
-  font-size: 0.875rem;
+  font-size: 1.16875rem;
   font-weight: 400;
   border-radius: 100vw;
   border: none;
@@ -51,6 +47,12 @@ body {
   color: hsl(35, 100%, 91%);
   box-shadow: none;
 }
+@media (max-width: 675px) {
+  .primary-button, .secondary-button {
+    padding: 0.85rem 1.5rem !important;
+    font-size: 0.875rem;
+  }
+}
 
 .secondary-button {
   background-color: hsl(347, 91%, 46%);
@@ -62,9 +64,18 @@ body {
   padding: 0.5rem;
   background-color: hsl(250, 78%, 11%);
   color: hsl(35, 100%, 91%);
-  font-size: 0.5625rem;
+  font-size: 0.6875rem;
   text-align: right;
   font-style: italic;
+}
+
+#decorated-text {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  text-wrap: wrap;
 }
 
 .nav-wrapper {
@@ -81,9 +92,11 @@ body {
 a {
   text-decoration: none;
   color: hsl(35, 100%, 91%);
+  transition: all 200ms ease;
 }
 a:hover {
   color: hsl(347, 91%, 46%);
+  cursor: pointer;
 }
 
 nav {
@@ -98,14 +111,14 @@ nav {
 }
 nav .logo {
   margin-inline: 1rem;
-  font-size: 1.375rem;
+  font-size: 1.875rem;
 }
 nav ul {
   display: flex;
   list-style: none;
   gap: 1rem;
   margin-left: auto;
-  font-size: 1.125rem;
+  font-size: 1.375rem;
 }
 nav .menu-icon {
   width: 40px;
@@ -151,6 +164,7 @@ nav .menu-icon:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: opacity 0.5s ease-out;
 }
 
 .modal {
@@ -177,4 +191,18 @@ nav .menu-icon:hover {
   right: 20px;
   width: 40px;
   margin: 0 !important;
+}
+
+.modal-overlay.fade-out {
+  opacity: 0;
+  animation: fade-out 0.5s forwards;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }/*# sourceMappingURL=navigation.css.map */

@@ -1,5 +1,4 @@
 export default function FormQuestion({ currentStep, formData, setFormData, updateFields }) {
-
   function updateFields(fields) {
     setFormData((prev) => {
       return { ...prev, ...fields };
@@ -37,6 +36,7 @@ export default function FormQuestion({ currentStep, formData, setFormData, updat
                   <input
                     type="radio"
                     value={answer}
+                    required
                     name={currentStep.name}
                     checked={formData[currentStep.id] === answer}
                     onChange={() => updateFields({ [currentStep.id]: answer })}
@@ -60,6 +60,7 @@ export default function FormQuestion({ currentStep, formData, setFormData, updat
               <textarea
                 autoFocus
                 required
+                maxLength='500'
                 value={formData[currentStep.id]}
                 name={currentStep.name}
                 onChange={(e) => updateFields({ [currentStep.id]: e.target.value })}

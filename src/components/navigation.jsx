@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { RoughNotation } from 'react-rough-notation';
+import { underlineAnnotate, circleAnnotate, boxAnnotate } from '../assets/annotationSettings.js';
 
 export default function Navigation() {
   useEffect(() => {
@@ -9,13 +11,18 @@ export default function Navigation() {
   }, []);
 
   const [showModal, setShowModal] = useState(false);
+  const [fadeOut, setFadeOut] = useState(false);
 
   const openModal = () => {
     setShowModal(true);
+    setFadeOut(false);
   };
 
   const closeModal = () => {
-    setShowModal(false);
+    setFadeOut(true);
+    setTimeout(() => {
+      setShowModal(false);
+    }, 500); // Delay should match the animation duration
   };
 
   return (
@@ -23,7 +30,7 @@ export default function Navigation() {
       <section className="nav-wrapper">
         <nav>
           <a href="#root" className="logo">
-            Daria.
+            <RoughNotation {...circleAnnotate}>Daria.</RoughNotation>
           </a>
           <ul>
             <li className="navlink">
@@ -43,13 +50,12 @@ export default function Navigation() {
             <path d="M 3 9 A 1.0001 1.0001 0 1 0 3 11 L 47 11 A 1.0001 1.0001 0 1 0 47 9 L 3 9 z M 3 24 A 1.0001 1.0001 0 1 0 3 26 L 47 26 A 1.0001 1.0001 0 1 0 47 24 L 3 24 z M 3 39 A 1.0001 1.0001 0 1 0 3 41 L 47 41 A 1.0001 1.0001 0 1 0 47 39 L 3 39 z"></path>
           </svg>
           {showModal && (
-            <div data-aos="fade-left" data-aos-duration="500" className="modal-overlay">
+            <div data-aos="fade-left" data-aos-duration="500" className={`modal-overlay ${fadeOut ? 'fade-out' : ''}`}>
               <div className="modal">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="bi bi-x"
+                  className="bi bi-x menu-icon"
                   viewBox="0 0 16 16"
-                  className="menu-icon"
                   onClick={closeModal}
                 >
                   <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />

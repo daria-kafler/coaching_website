@@ -2,17 +2,21 @@ import '../styles/form.css';
 import FormQuestion from './formquestion';
 import useMultistepForm from './useMultistepForm';
 import { questions } from '../assets/questions.js';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { RoughNotation } from 'react-rough-notation';
+import { underlineAnnotate, highlightAnnotate } from '../assets/annotationSettings.js';
+
+const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const formQuestions = [...questions];
 const EMPTY_FORM = {};
 questions.forEach((question) => {
   EMPTY_FORM[question.id] = '';
 });
-const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
 
 export default function Form() {
   const [formData, setFormData] = useState(EMPTY_FORM);
@@ -24,6 +28,15 @@ export default function Form() {
   const templateParams = {
     ...formData,
   };
+
+  function updateFields(fields) {
+    setFormData(
+      (prev) => {
+        return { ...prev, ...fields };
+      },
+      [formComplete]
+    );
+  }
 
   function sendEmail(e) {
     e.preventDefault();
@@ -45,29 +58,16 @@ export default function Form() {
     sendEmail(e).then(() => setFormComplete(true));
   }
 
-  function updateFields(fields) {
-    setFormData(
-      (prev) => {
-        return { ...prev, ...fields };
-      },
-      [formComplete]
-    );
-  }
-
-  useEffect(() => {
-    console.log(`Form completed? ${formComplete}`);
-  });
-
   return (
     <>
       <section id="form">
         <div className="content-wrapper">
           <h1 className="form-title">
-            Ready to start or not quite sure? <br /> Book a free 30-minute consultation call.
+            Ready to start or not quite sure? <br /> <RoughNotation {...underlineAnnotate} >Book a free 30-minute consultation call.</RoughNotation>
           </h1>
           {formComplete ? (
             <div style={{margin: 'auto 0'}}>
-              <p>🎉🎉🎉 Got your message, expect to receive an email from me shortly! 🎉🎉🎉</p>
+              <h2>🎉🎉🎉 Got your message, expect to receive an email from me shortly! 🎉🎉🎉</h2>
             </div>
           ) : (
             <div>

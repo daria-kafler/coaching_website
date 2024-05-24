@@ -13,7 +13,6 @@ svg {
 }
 
 body {
-  background-color: hsl(347, 91%, 46%);
   font-family: "Karla", sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -68,7 +67,7 @@ body {
 }
 
 #form {
-  min-height: 70vh;
+  min-height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;

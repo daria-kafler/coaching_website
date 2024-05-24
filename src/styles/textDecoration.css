@@ -22,18 +22,21 @@ body {
 }
 
 .primary-button, .secondary-button {
-  padding: 1.25rem 2rem !important;
+  height: 2rem;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 1rem 2rem !important;
   align-items: center;
   display: flex;
   font-family: "Karla", sans-serif;
-  font-size: 1.16875rem;
+  font-size: 0.875rem;
   font-weight: 400;
   border-radius: 100vw;
   border: none;
   background-color: hsl(347, 91%, 46%);
   color: hsl(35, 100%, 91%);
-  transition: all 0.25s ease;
   cursor: pointer;
+  transition: all 0.25s ease;
 }
 .primary-button:hover, .secondary-button:hover {
   box-shadow: 0 2px hsl(35, 100%, 91%);
@@ -47,12 +50,6 @@ body {
   color: hsl(35, 100%, 91%);
   box-shadow: none;
 }
-@media (max-width: 675px) {
-  .primary-button, .secondary-button {
-    padding: 0.85rem 1.5rem !important;
-    font-size: 0.875rem;
-  }
-}
 
 .secondary-button {
   background-color: hsl(347, 91%, 46%);
@@ -64,16 +61,47 @@ body {
   padding: 0.5rem;
   background-color: hsl(250, 78%, 11%);
   color: hsl(35, 100%, 91%);
-  font-size: 0.6875rem;
+  font-size: 0.5625rem;
   text-align: right;
   font-style: italic;
 }
 
-#decorated-text {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0;
-  padding: 0;
+.svg-wrap {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+}
+
+section {
+  position: relative;
+  z-index: 1;
   display: inline;
-  text-wrap: wrap;
-}/*# sourceMappingURL=globals.css.map */
+  backface-visibility: hidden;
+}
+
+section #decorated-text {
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+  white-space: nowrap;
+  fill: none;
+}
+
+#decorated-text svg.underline {
+  position: absolute;
+  z-index: -10;
+  height: 100%;
+  transform: translateY(-50%);
+  stroke-width: 4px;
+  opacity: 0.5;
+}
+
+#decorated-text svg.highlight {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  opacity: 0.5;
+  transform: translateY(-100%);
+  stroke-width: 60px;
+  stroke-dashoffset: 0px;
+}/*# sourceMappingURL=textDecoration.css.map */

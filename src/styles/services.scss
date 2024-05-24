@@ -35,14 +35,19 @@
       gap: 4rem;
 
       .single-service {
-        max-width: 250px;
-        min-width: 100px;
+        min-width: fit-content;
+        flex-grow: 1;
         text-align: center;
         display: grid;
         gap: 1rem;
 
-        h3 {
-          font-size: $lsh3-fs;
+        .service-name {
+          font-size: calc($lsh3-fs * 1.25);
+          font-weight: $fw-bold;
+        }
+
+        .service-text {
+          font-size: $lsp-fs;
         }
 
         .tooltip-icon {
@@ -81,8 +86,12 @@
           display: grid;
           gap: 0.5rem;
 
-          h3 {
+          .service-name {
             font-size: $ssh3-fs;
+          }
+
+          .service-text {
+            font-size: $ssp-fs;
           }
 
           p {

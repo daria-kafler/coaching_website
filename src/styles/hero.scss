@@ -14,9 +14,13 @@
 
   display: grid;
   place-content: center;
-  clip-path: ellipse(100% 60% at 66% 39%);
 
+  
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 5%;
   .overlay {
+    border-bottom-left-radius: 50% 20%;
+    border-bottom-right-radius: 50% 5%;
     position: absolute;
     background-color: rgba($color: #000000, $alpha: 0.45);
     height: 100%;
@@ -34,7 +38,7 @@
     gap: 2rem;
 
     .hero-title {
-      font-size: $lsh1-fs;
+      font-size: calc($lsh1-fs * 1.5);
     }
 
     .hero-text {
@@ -46,6 +50,10 @@
 
 @media (max-width: 675px) {
   #hero {
+    h1 {
+      font-size: $ssh1-fs;
+    }
+
     .content-wrapper {
       padding: 2rem !important;
     }

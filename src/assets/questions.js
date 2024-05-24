@@ -35,19 +35,19 @@ export const questions = [
     answerOptions: ['Mornings', 'Afternoons', 'Evenings', "I'm flexible"],
   },
   {
-    question: 'What do you want to work towards? (max 250 words)',
+    question: 'What do you want to work towards? (max 500 characters)',
     componentType: 'textarea',
     answerType: '',
     name: 'work-focus',
     answerOptions: null,
   },
-  {
-    question: 'Would you like to join my waitlist?',
-    componentType: 'input',
-    answerType: 'radio',
-    name: 'waitlist',
-    answerOptions: ['yes', 'no'],
-  },
+  // {
+  //   question: 'Would you like to join my waitlist?',
+  //   componentType: 'input',
+  //   answerType: 'radio',
+  //   name: 'waitlist',
+  //   answerOptions: ['yes', 'no'],
+  // },
   {
     question: 'Email address',
     componentType: 'input',

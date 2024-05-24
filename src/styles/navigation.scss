@@ -15,9 +15,11 @@
 a {
   text-decoration: none;
   color: $clr--neutral;
+  transition: all 200ms ease;
 
   &:hover {
     color: $clr--primary;
+    cursor: pointer;
   }
 }
 
@@ -33,7 +35,7 @@ nav {
 
   .logo {
     margin-inline: 1rem;
-    font-size: $lsh3-fs;
+    font-size: calc($lsh2-fs * 0.75);
   }
 
   ul {
@@ -95,6 +97,8 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: opacity 0.5s ease-out;
 }
 
 .modal {
@@ -122,5 +126,19 @@ nav {
     right: 20px;
     width: 40px;
     margin: 0 !important;
+  }
+}
+
+.modal-overlay.fade-out {
+  opacity: 0;
+  animation: fade-out 0.5s forwards;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
