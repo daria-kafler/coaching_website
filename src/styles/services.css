@@ -32,8 +32,8 @@ body {
   border: none;
   background-color: hsl(347, 91%, 46%);
   color: hsl(35, 100%, 91%);
-  cursor: pointer;
   transition: all 0.25s ease;
+  cursor: pointer;
 }
 .primary-button:hover, .secondary-button:hover {
   box-shadow: 0 2px hsl(35, 100%, 91%);
@@ -78,9 +78,22 @@ body {
   text-wrap: wrap;
 }
 
-#products {
-  min-height: 60vh;
+.diagonal {
+  position: relative;
+  isolation: isolate;
+}
+.diagonal::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transform: skewY(-8deg);
   background-color: hsl(89, 29%, 34%);
+}
+
+#products {
+  background: linear-gradient(to bottom, hsl(347, 91%, 46%) 50%, hsl(35, 100%, 91%) 50%);
+  min-height: 60vh;
   color: hsl(35, 100%, 91%);
   display: grid;
   place-content: center;
@@ -126,8 +139,8 @@ body {
 }
 #products .content-wrapper .services-list .single-service .tooltip-icon {
   display: inline-block;
-  fill: hsl(347, 91%, 46%);
-  width: 12px;
+  fill: hsl(35, 100%, 91%);
+  width: 15px;
   margin-bottom: 5px;
 }
 #products .content-wrapper .services-list .single-service .tooltip-icon:hover {

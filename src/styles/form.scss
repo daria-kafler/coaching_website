@@ -1,18 +1,18 @@
 @import 'globals';
 
 #form {
-  min-height: 60vh;
-  display: flex;
+  display: grid;
   justify-content: center;
-  align-items: center;
+  align-items: start;
+  padding-block: 4rem;
 
   background-color: $clr--accent;
   color: $clr--neutral;
 
   .content-wrapper {
-    min-height: inherit;
+    min-height: 40vh;
+    width: 1200px;
     max-width: $max-width;
-    width: 100%;
 
     padding: 4rem;
     display: flex;
@@ -20,115 +20,67 @@
     flex-direction: column;
     justify-content: start;
 
-    .form-title {
-      font-size: $lsh2-fs;
+    h1 {
+      font-size: $lsh1-fs;
     }
 
-    .progress {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-
-      .progress-bar {
-        height: 5px;
-        background-color: $clr--primary;
-        border-radius: 8px;
-        transition: width 0.25s ease-in-out;
-      }
-      .nominal-progress {
-        min-width: fit-content;
-      }
-    }
-
-    .form-field {
-      position: relative;
-      border-radius: 1rem;
-
-      display: flex;
-      flex-direction: column;
-
-      flex-grow: 1;
-
-      .single-question {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 2rem;
-
-        h1 {
-          font-size: $lsh3-fs;
-          margin: 2rem 0 0 0;
-        }
-
-        input[type='text-area'],
-        textarea,
-        input[type='email'] {
-          outline: none;
-          margin-top: 0;
-          margin-bottom: 2rem;
-          background-color: inherit;
-          padding: 12px 50px 12px 0;
-          border: none;
-          border-bottom: 2px solid $clr--secondary;
-          font-size: $lsp-fs;
-          color: $clr--neutral;
-        }
-
-        textarea {
-          width: 50%;
-        }
-
-        .non-text {
-          font-size: $lsp-fs;
-          input {
-            margin: 1rem;
-            outline: none;
-          }
-        }
-      }
-
-      .prev-next-buttons {
-        padding-block: 0 2rem;
-        display: flex;
-        flex-direction: row;
-
-        button {
-          margin-right: 1rem;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 675px) {
-  #form {
-    overflow: hidden;
-    min-height: 80vh;
-
-    .content-wrapper {
-      max-width: 100%;
-      padding: 4rem 2rem;
-
+    #form-area {
+      margin-top: 4rem;
       .form-title {
-        font-size: $ssh2-fs;
+        font-size: $lsh2-fs;
+        align-self: flex-start;
       }
 
       .progress {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+
+        .progress-bar {
+          height: 5px;
+          background-color: $clr--primary;
+          border-radius: 8px;
+          transition: width 0.25s ease-in-out;
+        }
         .nominal-progress {
-          font-size: calc($ssp-fs * 0.75);
+          min-width: fit-content;
         }
       }
 
       .form-field {
+        position: relative;
+        border-radius: 1rem;
+
+        display: flex;
+        flex-direction: column;
+
+        flex-grow: 1;
+
         .single-question {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 2rem;
+
           h1 {
-            font-size: $ssh3-fs;
+            font-size: calc($lsh2-fs * 0.70);
+            margin: 2rem 0 0 0;
           }
 
           input[type='text-area'],
           textarea,
           input[type='email'] {
-            font-size: $ssp-fs;
+            outline: none;
+            margin-top: 0;
+            margin-bottom: 2rem;
+            background-color: inherit;
+            padding: 12px 50px 12px 0;
+            border: none;
+            border-bottom: 2px solid $clr--secondary;
+            font-size: $lsp-fs;
+            font-weight: $fw-light;
+            font-style: italic;
+            color: $clr--neutral;
           }
 
           textarea {
@@ -136,7 +88,11 @@
           }
 
           .non-text {
-            font-size: $ssp-fs;
+            font-size: $lsp-fs;
+            input {
+              margin: 1rem;
+              outline: none;
+            }
           }
         }
 
@@ -147,6 +103,69 @@
 
           button {
             margin-right: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 675px) {
+  #form {
+    overflow: hidden;
+    min-height: 80vh;
+    padding-block: unset;
+
+    .content-wrapper {
+      max-width: 100%;
+      padding: 4rem 2rem;
+      width: 100%;
+
+      h1 {
+        font-size: $ssh1-fs;
+      }
+
+      #form-area {
+        margin-top: 2rem;
+        .form-title {
+          font-size: $ssh2-fs;
+        }
+
+        .progress {
+          .nominal-progress {
+            font-size: calc($ssp-fs * 0.75);
+          }
+        }
+
+        .form-field {
+          .single-question {
+            h1 {
+              font-size: $ssh3-fs;
+            }
+
+            input[type='text-area'],
+            textarea,
+            input[type='email'] {
+              font-size: $ssp-fs;
+            }
+
+            textarea {
+              width: 50%;
+            }
+
+            .non-text {
+              font-size: $ssp-fs;
+            }
+          }
+
+          .prev-next-buttons {
+            padding-block: 0 2rem;
+            display: flex;
+            flex-direction: row;
+
+            button {
+              margin-right: 1rem;
+            }
           }
         }
       }

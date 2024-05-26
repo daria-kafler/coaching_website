@@ -6,7 +6,7 @@ import { TooltipIcon } from '../assets/icons.jsx';
 export default function Services() {
   return (
     <>
-      <section id="products">
+      <section id="products" className='diagonal'>
         <div className="content-wrapper">
           <h1>
             Ways we can{' '}

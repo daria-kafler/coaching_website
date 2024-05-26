@@ -1,9 +1,22 @@
 @import 'globals';
 
-#products {
-  min-height: 60vh;
+.diagonal {
+  position: relative;
+  isolation: isolate;
 
-  background-color: $clr--secondary;
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    transform: skewY(-8deg);
+    background-color: $clr--secondary;
+  }
+}
+
+#products {
+  background: linear-gradient(to bottom, $clr--primary 50%, $clr--neutral 50%);
+  min-height: 60vh;
   color: $clr--neutral;
 
   display: grid;
@@ -52,8 +65,8 @@
 
         .tooltip-icon {
           display: inline-block;
-          fill: $clr--primary;
-          width: 12px;
+          fill: $clr--neutral;
+          width: 15px;
           margin-bottom: 5px;
 
           &:hover {

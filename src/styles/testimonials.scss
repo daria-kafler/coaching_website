@@ -1,15 +1,21 @@
 @import 'globals';
 
 #testimonials {
-  background-color: $clr--neutral;
-  color: $clr--primary;
+  background-color: $clr--accent;
 
-  min-height: 70vh;
+  #testimonials-background {
+    background-color: $clr--neutral;
+    color: $clr--primary;
+  
+    min-height: 70vh;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    border-bottom-right-radius: 100% 8%;
+  }
 
   .content-wrapper {
     max-width: $max-width;

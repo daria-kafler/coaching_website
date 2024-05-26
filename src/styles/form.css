@@ -22,21 +22,18 @@ body {
 }
 
 .primary-button, .secondary-button {
-  height: 2rem;
-  width: -moz-max-content;
-  width: max-content;
-  padding: 1rem 2rem !important;
+  padding: 1.25rem 2rem !important;
   align-items: center;
   display: flex;
   font-family: "Karla", sans-serif;
-  font-size: 0.875rem;
+  font-size: 1.16875rem;
   font-weight: 400;
   border-radius: 100vw;
   border: none;
   background-color: hsl(347, 91%, 46%);
   color: hsl(35, 100%, 91%);
-  cursor: pointer;
   transition: all 0.25s ease;
+  cursor: pointer;
 }
 .primary-button:hover, .secondary-button:hover {
   box-shadow: 0 2px hsl(35, 100%, 91%);
@@ -50,6 +47,12 @@ body {
   color: hsl(35, 100%, 91%);
   box-shadow: none;
 }
+@media (max-width: 675px) {
+  .primary-button, .secondary-button {
+    padding: 0.85rem 1.5rem !important;
+    font-size: 0.875rem;
+  }
+}
 
 .secondary-button {
   background-color: hsl(347, 91%, 46%);
@@ -61,67 +64,83 @@ body {
   padding: 0.5rem;
   background-color: hsl(250, 78%, 11%);
   color: hsl(35, 100%, 91%);
-  font-size: 0.5625rem;
+  font-size: 0.6875rem;
   text-align: right;
   font-style: italic;
 }
 
+#decorated-text {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  text-wrap: wrap;
+}
+
 #form {
-  min-height: 60vh;
-  display: flex;
+  display: grid;
   justify-content: center;
-  align-items: center;
+  align-items: start;
+  padding-block: 4rem;
   background-color: hsl(250, 78%, 11%);
   color: hsl(35, 100%, 91%);
 }
 #form .content-wrapper {
-  min-height: inherit;
+  min-height: 40vh;
+  width: 1200px;
   max-width: 1200px;
-  width: 100%;
   padding: 4rem;
   display: flex;
   gap: 1rem;
   flex-direction: column;
   justify-content: start;
 }
-#form .content-wrapper .form-title {
-  font-size: 1.75rem;
+#form .content-wrapper h1 {
+  font-size: 3.25rem;
 }
-#form .content-wrapper .progress {
+#form .content-wrapper #form-area {
+  margin-top: 4rem;
+}
+#form .content-wrapper #form-area .form-title {
+  font-size: 2.5rem;
+  align-self: flex-start;
+}
+#form .content-wrapper #form-area .progress {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
 }
-#form .content-wrapper .progress .progress-bar {
+#form .content-wrapper #form-area .progress .progress-bar {
   height: 5px;
   background-color: hsl(347, 91%, 46%);
   border-radius: 8px;
   transition: width 0.25s ease-in-out;
 }
-#form .content-wrapper .progress .nominal-progress {
+#form .content-wrapper #form-area .progress .nominal-progress {
   min-width: -moz-fit-content;
   min-width: fit-content;
 }
-#form .content-wrapper .form-field {
+#form .content-wrapper #form-area .form-field {
   position: relative;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
-#form .content-wrapper .form-field .single-question {
+#form .content-wrapper #form-area .form-field .single-question {
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
 }
-#form .content-wrapper .form-field .single-question h1 {
-  font-size: 1.375rem;
+#form .content-wrapper #form-area .form-field .single-question h1 {
+  font-size: 1.75rem;
   margin: 2rem 0 0 0;
 }
-#form .content-wrapper .form-field .single-question input[type=text-area],
-#form .content-wrapper .form-field .single-question textarea,
-#form .content-wrapper .form-field .single-question input[type=email] {
+#form .content-wrapper #form-area .form-field .single-question input[type=text-area],
+#form .content-wrapper #form-area .form-field .single-question textarea,
+#form .content-wrapper #form-area .form-field .single-question input[type=email] {
   outline: none;
   margin-top: 0;
   margin-bottom: 2rem;
@@ -129,25 +148,27 @@ body {
   padding: 12px 50px 12px 0;
   border: none;
   border-bottom: 2px solid hsl(89, 29%, 34%);
-  font-size: 1.125rem;
+  font-size: 1.375rem;
+  font-weight: 200;
+  font-style: italic;
   color: hsl(35, 100%, 91%);
 }
-#form .content-wrapper .form-field .single-question textarea {
+#form .content-wrapper #form-area .form-field .single-question textarea {
   width: 50%;
 }
-#form .content-wrapper .form-field .single-question .non-text {
-  font-size: 1.125rem;
+#form .content-wrapper #form-area .form-field .single-question .non-text {
+  font-size: 1.375rem;
 }
-#form .content-wrapper .form-field .single-question .non-text input {
+#form .content-wrapper #form-area .form-field .single-question .non-text input {
   margin: 1rem;
   outline: none;
 }
-#form .content-wrapper .form-field .prev-next-buttons {
+#form .content-wrapper #form-area .form-field .prev-next-buttons {
   padding-block: 0 2rem;
   display: flex;
   flex-direction: row;
 }
-#form .content-wrapper .form-field .prev-next-buttons button {
+#form .content-wrapper #form-area .form-field .prev-next-buttons button {
   margin-right: 1rem;
 }
 
@@ -155,37 +176,45 @@ body {
   #form {
     overflow: hidden;
     min-height: 80vh;
+    padding-block: unset;
   }
   #form .content-wrapper {
     max-width: 100%;
     padding: 4rem 2rem;
+    width: 100%;
   }
-  #form .content-wrapper .form-title {
+  #form .content-wrapper h1 {
+    font-size: 1.75rem;
+  }
+  #form .content-wrapper #form-area {
+    margin-top: 2rem;
+  }
+  #form .content-wrapper #form-area .form-title {
     font-size: 1.375rem;
   }
-  #form .content-wrapper .progress .nominal-progress {
+  #form .content-wrapper #form-area .progress .nominal-progress {
     font-size: 0.65625rem;
   }
-  #form .content-wrapper .form-field .single-question h1 {
+  #form .content-wrapper #form-area .form-field .single-question h1 {
     font-size: 1.125rem;
   }
-  #form .content-wrapper .form-field .single-question input[type=text-area],
-  #form .content-wrapper .form-field .single-question textarea,
-  #form .content-wrapper .form-field .single-question input[type=email] {
+  #form .content-wrapper #form-area .form-field .single-question input[type=text-area],
+  #form .content-wrapper #form-area .form-field .single-question textarea,
+  #form .content-wrapper #form-area .form-field .single-question input[type=email] {
     font-size: 0.875rem;
   }
-  #form .content-wrapper .form-field .single-question textarea {
+  #form .content-wrapper #form-area .form-field .single-question textarea {
     width: 50%;
   }
-  #form .content-wrapper .form-field .single-question .non-text {
+  #form .content-wrapper #form-area .form-field .single-question .non-text {
     font-size: 0.875rem;
   }
-  #form .content-wrapper .form-field .prev-next-buttons {
+  #form .content-wrapper #form-area .form-field .prev-next-buttons {
     padding-block: 0 2rem;
     display: flex;
     flex-direction: row;
   }
-  #form .content-wrapper .form-field .prev-next-buttons button {
+  #form .content-wrapper #form-area .form-field .prev-next-buttons button {
     margin-right: 1rem;
   }
 }/*# sourceMappingURL=form.css.map */

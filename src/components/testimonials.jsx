@@ -9,13 +9,15 @@ export default function Testimonials() {
   return (
     <>
       <section id="testimonials">
-        <div className="content-wrapper">
-          <h1>
-            Right now, I’m just a lady on the internet, so don’t listen to me.{' '}
-            <RoughNotation {...underlineAnnotate}>Here is what others had to say.</RoughNotation>
-          </h1>
-          <div className="all-testimonials">
-            <TestimonialCarousel user_testimonials={user_testimonials} />
+        <div id="testimonials-background">
+          <div className="content-wrapper">
+            <h1>
+              Right now, I’m just a lady on the internet, so don’t listen to me.{' '}
+              <RoughNotation {...underlineAnnotate}>Here is what others had to say.</RoughNotation>
+            </h1>
+            <div className="all-testimonials">
+              <TestimonialCarousel user_testimonials={user_testimonials} />
+            </div>
           </div>
         </div>
       </section>

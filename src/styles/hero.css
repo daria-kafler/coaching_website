@@ -32,8 +32,8 @@ body {
   border: none;
   background-color: hsl(347, 91%, 46%);
   color: hsl(35, 100%, 91%);
-  cursor: pointer;
   transition: all 0.25s ease;
+  cursor: pointer;
 }
 .primary-button:hover, .secondary-button:hover {
   box-shadow: 0 2px hsl(35, 100%, 91%);
@@ -79,6 +79,9 @@ body {
 }
 
 #hero {
+  background-color: hsl(35, 100%, 91%);
+}
+#hero #hero-background {
   background-image: url("../assets/Daria-bike.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -89,30 +92,30 @@ body {
   z-index: 1;
   display: grid;
   place-content: center;
-  border-bottom-left-radius: 50% 20%;
-  border-bottom-right-radius: 50% 5%;
+  border-bottom-left-radius: 100% 10%;
 }
-#hero .overlay {
-  border-bottom-left-radius: 50% 20%;
-  border-bottom-right-radius: 50% 5%;
+#hero #hero-background .overlay {
+  border-bottom-left-radius: 100% 10%;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.45);
   height: 100%;
   width: 100%;
   z-index: 2;
 }
-#hero .content-wrapper {
+#hero #hero-background .parallax {
   z-index: 100;
+}
+#hero #hero-background .parallax .content-wrapper {
   max-width: 1200px;
   padding-top: 37.5px;
   padding-inline: 4rem;
   display: grid;
   gap: 2rem;
 }
-#hero .content-wrapper .hero-title {
+#hero #hero-background .parallax .content-wrapper .hero-title {
   font-size: 4.875rem;
 }
-#hero .content-wrapper .hero-text {
+#hero #hero-background .parallax .content-wrapper .hero-text {
   max-width: 50%;
   font-size: 1.375rem;
 }

@@ -10,23 +10,27 @@ import Footer from './components/footer.jsx';
 import ScrollToTopButton from './components/scrollToTopButton.jsx';
 import 'react-tooltip/dist/react-tooltip.css';
 
+import { ParallaxProvider } from 'react-scroll-parallax';
+
 function App() {
   return (
     <>
-      <Navigation />
-      <Hero />
-      <About />
-      <Teamup />
-      <Services />
-      <Testimonials />
-      <Form />
-      <Footer />
-      <ScrollToTopButton />
-      <div id="website-by">
-        <a target="_blank" href="https://www.ataabatay.com/">
-          website by Ata Abatay
-        </a>
-      </div>
+      <ParallaxProvider>
+        <Navigation />
+        <Hero />
+        <About />
+        <Teamup />
+        <Services />
+        <Testimonials />
+        <Form />
+        <Footer />
+        <ScrollToTopButton />
+        <div id="website-by">
+          <a target="_blank" href="https://www.ataabatay.com/">
+            website by Ata Abatay
+          </a>
+        </div>
+      </ParallaxProvider>
     </>
   );
 }

@@ -17,7 +17,6 @@ questions.forEach((question) => {
   EMPTY_FORM[question.id] = '';
 });
 
-
 export default function Form() {
   const [formData, setFormData] = useState(EMPTY_FORM);
   const [formComplete, setFormComplete] = useState(false);
@@ -63,14 +62,17 @@ export default function Form() {
       <section id="form">
         <div className="content-wrapper">
           <h1 className="form-title">
-            Ready to start or not quite sure? <br /> <RoughNotation {...underlineAnnotate} >Book a free 30-minute consultation call.</RoughNotation>
+            Ready to start or not quite sure? <br />{' '}
+            <RoughNotation {...underlineAnnotate}>
+              Book a free 30-minute consultation call.
+            </RoughNotation>
           </h1>
           {formComplete ? (
-            <div style={{margin: 'auto 0'}}>
+            <div style={{ margin: 'auto 0' }}>
               <h2>🎉🎉🎉 Got your message, expect to receive an email from me shortly! 🎉🎉🎉</h2>
             </div>
           ) : (
-            <div>
+            <div id='form-area'>
               <div className="progress">
                 <div
                   className="progress-bar"

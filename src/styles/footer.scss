@@ -91,9 +91,17 @@
       flex-grow: 1;
       flex-direction: column;
       gap: 2rem;
+      font-size: $ssp-fs;
       .left,
       .right {
         width: 100%;
+      }
+
+      .left {
+        .to-home {
+          font-size: $ssh1-fs;
+          width: min-content;
+        }
       }
 
       .right {

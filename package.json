@@ -20,6 +20,7 @@
     "react-dom": "^18.3.1",
     "react-rough-notation": "^1.0.5",
     "react-router-dom": "^6.23.1",
+    "react-scroll-parallax": "^3.4.5",
     "react-slick": "^0.30.2",
     "react-tooltip": "^5.26.4",
     "slick-carousel": "^1.8.1"

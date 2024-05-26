@@ -32,8 +32,8 @@ body {
   border: none;
   background-color: hsl(347, 91%, 46%);
   color: hsl(35, 100%, 91%);
-  cursor: pointer;
   transition: all 0.25s ease;
+  cursor: pointer;
 }
 .primary-button:hover, .secondary-button:hover {
   box-shadow: 0 2px hsl(35, 100%, 91%);
@@ -79,7 +79,7 @@ body {
 }
 
 #about {
-  --height: 60vh;
+  --height: 50vh;
   min-height: var(--height);
   width: 100%;
   display: grid;
@@ -94,6 +94,7 @@ body {
   max-width: 1200px;
   padding: 4rem;
   display: grid;
+  align-items: center;
 }
 #about .content-wrapper .text-content {
   min-width: -moz-fit-content;

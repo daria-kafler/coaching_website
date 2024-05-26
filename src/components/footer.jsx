@@ -21,7 +21,7 @@ export default function Footer() {
               </svg>
               <p>{today.getFullYear()} All rights reserved.</p>
             </div>
-            <a href="#hero" className="to-home">
+            <a href="#" className="to-home">
               Daria.
             </a>
           </div>

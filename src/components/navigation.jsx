@@ -29,7 +29,7 @@ export default function Navigation() {
     <>
       <section className="nav-wrapper">
         <nav>
-          <a href="#root" className="logo">
+          <a href="#" className="logo">
             <RoughNotation {...circleAnnotate}>Daria.</RoughNotation>
           </a>
           <ul>
