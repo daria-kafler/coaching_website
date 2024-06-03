@@ -1,3 +1,5 @@
+// Keeping the social icons here instead of pure svgs to maintain the code a little easier. If you want to add more social icons just add them here and use as components much neater this way but you don't have to.
+
 export function InstagramIcon() {
   return (
     <>

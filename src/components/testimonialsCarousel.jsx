@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 
 import { testimonials } from '../assets/testimonials.js';
 
+// ! Testimonials are fed from the testimonials.js file so add/remove/edit your testimonials there this is just a component to render them with style
 const allTestimonials = testimonials;
 
 function CustomSlide({ singleTestimonial }) {
@@ -43,7 +44,9 @@ function CustomSlide({ singleTestimonial }) {
   );
 }
 
+
 export default function TestimonialCarousel() {
+  // ! These are the settings for the carousel, play around with them to see how the carousel behaves. Using React Slick as the carousel component
   var settings = {
     dots: true,
     infinite: true,

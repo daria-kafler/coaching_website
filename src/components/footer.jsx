@@ -7,6 +7,7 @@ import { InstagramIcon, LinkedinIcon, ThreadsIcon, XIcon } from '../assets/icons
 const today = new Date();
 
 export default function Footer() {
+  // Using a state to show or not show the privacy policy and terms. the state here is managed by the links to these pages below
   const [showTerms, setShowTerms] = useState(false);
   const [showPrivacy, setShowPrivacy] = useState(false);
 
@@ -39,6 +40,7 @@ export default function Footer() {
             </div>
             <div className="socials">
               <p>Socials</p>
+              {/* The social icons are coming from icons.jsx where all the icons are kept as functional components */}
               <div className="icons">
                 <a href="#" className="social-icon instagram">
                   <InstagramIcon />
@@ -57,6 +59,7 @@ export default function Footer() {
           </div>
         </div>
       </section>
+      {/* These are the modal components that appear when you click on privacy or terms */}
       {showTerms && <Terms showTerms={showTerms} setShowTerms={setShowTerms} />}
       {showPrivacy && <Privacy showPrivacy={showPrivacy} setShowPrivacy={setShowPrivacy} />}
     </>

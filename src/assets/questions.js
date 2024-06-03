@@ -1,3 +1,5 @@
+// This is where you store the questions of the custom form, here you can add/remove/edit question. Make sure to follow the format of the questions I have here, if you need help with adding a different kind of question reach out to me as we might need to think about that in the context of the functional question component.
+
 export const questions = [
   {
     question: 'First name',

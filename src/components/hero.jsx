@@ -1,5 +1,5 @@
 import { RoughNotation } from 'react-rough-notation';
-import { underlineAnnotate, circleAnnotate, boxAnnotate } from '../assets/annotationSettings.js';
+import { underlineAnnotate } from '../assets/annotationSettings.js';
 
 import { Parallax } from 'react-scroll-parallax';
 

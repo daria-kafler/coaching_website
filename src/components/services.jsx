@@ -1,3 +1,8 @@
+```
+The only thing I hate is the tooltip in the entire project.
+I found out about a better tooltip a little too late into the project so I might come and in take a look at that if you like.
+```
+
 import { Tooltip } from 'react-tooltip';
 import { highlightAnnotate } from '../assets/annotationSettings.js';
 import { RoughNotation } from 'react-rough-notation';

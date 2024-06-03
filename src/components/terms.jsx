@@ -1,3 +1,7 @@
+```
+Obviously this page needs to be changed with the actual content of privacy policy
+```
+
 import '../styles/terms.css';
 import { useEffect } from 'react';
 import AOS from 'aos';

@@ -1,6 +1,5 @@
-import Daria from '../assets/Daria-bike.jpg'
-
-// import the images for each testifier if you want to add images for each testimonial giver
+// Here you have the testimonials, pretty simple just follow the format to add/remove/edit testimonials and they will show up on the testimonials component.
+// import the images for each testifier if you want to add images for each testimonial giver otherwise a simple icon will appear if there is no image for the testimonial giver
 
 export const testimonials = [
   {

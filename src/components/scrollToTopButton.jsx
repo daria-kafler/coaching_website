@@ -31,7 +31,7 @@ export default function scrollToTopButton() {
     <>
       <div id="scroll-to-top">
         {scrollToTopButton && (
-          <button className="scroll-to-top-btn" onClick={scrollUp} data-aos="zoom-in" data-aos-duration="1000">
+          <button className="scroll-to-top-btn" onClick={scrollUp} data-aos="zoom-in" data-aos-duration="2000">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
