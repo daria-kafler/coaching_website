@@ -25,12 +25,8 @@ export default function Form() {
   // If the form is complete we render the congrats I'll be in touch element instead of the form
   const [formComplete, setFormComplete] = useState(false);
 
-  ```
-  I used a custom hook for the form here. 
-  This hook allows us to easily go back and forth in the form, render the correct question, check if we are on the first or last step to render the relevant buttons.
-  All we do is pass an array of questions to the hook and it handles everything.
-  Here we pass formQuestions which I imported from the Questions.js where we store all the questions.
-  ```
+  // I used a custom hook for the form here. This hook allows us to easily go back and forth in the form, render the correct question, check if we are on the first or last step to render the relevant buttons. All we do is pass an array of questions to the hook and it handles everything. Here we pass formQuestions which I imported from the Questions.js where we store all the questions.
+
   const { steps, currentStepIndex, currentStep, isFirstStep, isLastStep, back, next, goTo } =
     useMultistepForm(formQuestions);
 
@@ -63,9 +59,7 @@ export default function Form() {
     );
   }
 
-  ```
-  Function to handle form submit at the end to send email to Daria and set the form to complete so the congrats element is rendered instead of questions.
-  ```
+  // Function to handle form submit at the end to send email to Daria and set the form to complete so the congrats element is rendered instead of questions.
   function onSubmit(e) {
     e.preventDefault();
     if (!isLastStep) return next();
@@ -78,16 +72,14 @@ export default function Form() {
         <div className="content-wrapper">
           <h1 className="form-title">
             Ready to start or not quite sure? <br />{' '}
-            <RoughNotation {...underlineAnnotate}>
-              Book a free 30-minute consultation call.
-            </RoughNotation>
+            <RoughNotation {...underlineAnnotate}>Book a free 30-minute consultation call.</RoughNotation>
           </h1>
           {formComplete ? (
             <div style={{ margin: 'auto 0' }}>
               <h2>🎉🎉🎉 Got your message, expect to receive an email from me shortly! 🎉🎉🎉</h2>
             </div>
           ) : (
-            <div id='form-area'>
+            <div id="form-area">
               <div className="progress">
                 <div
                   className="progress-bar"

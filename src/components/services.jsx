@@ -1,7 +1,4 @@
-```
-The only thing I hate is the tooltip in the entire project.
-I found out about a better tooltip a little too late into the project so I might come and in take a look at that if you like.
-```
+// The only thing I hate is the tooltip in the entire project. I found out about a better tooltip a little too late into the project so I might come and in take a look at that if you like.
 
 import { Tooltip } from 'react-tooltip';
 import { highlightAnnotate } from '../assets/annotationSettings.js';
@@ -11,7 +8,7 @@ import { TooltipIcon } from '../assets/icons.jsx';
 export default function Services() {
   return (
     <>
-      <section id="products" className='diagonal'>
+      <section id="products" className="diagonal">
         <div className="content-wrapper">
           <h1>
             Ways we can{' '}

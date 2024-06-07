@@ -18,6 +18,7 @@
   background: linear-gradient(to bottom, $clr--primary 50%, $clr--neutral 50%);
   min-height: 60vh;
   color: $clr--neutral;
+  padding-block: 4rem;
 
   display: grid;
   place-content: center;

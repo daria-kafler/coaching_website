@@ -131,3 +131,11 @@ body {
   display: inline;
   text-wrap: wrap;
 }
+
+#website-by {
+  font-size: 1rem;
+
+  @media (max-width: 675px) {
+    font-size: 0.75rem;
+  }
+}

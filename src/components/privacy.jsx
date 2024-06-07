@@ -1,6 +1,4 @@
-```
-Obviously this page needs to be changed with the actual content of privacy policy
-```
+// Obviously this page needs to be changed with the actual content of privacy policy
 
 import '../styles/termsAndPrivacy.css';
 import { useEffect } from 'react';

@@ -98,6 +98,11 @@
       }
 
       .left {
+
+        .copyright {
+          font-size: calc($ssp-fs * 0.8);
+
+        }
         .to-home {
           font-size: $ssh1-fs;
           width: min-content;

@@ -1,8 +1,5 @@
-``` 
-We have 4 types of questions and based on the type of current question we render the relevant question component below.
-I reckon I could've handled this a bit better now in hindsight
-Still the component is powerful and will render the correct type if you follow the format of questions in Question.js
-```
+// We have 4 types of questions and based on the type of current question we render the relevant question component below. I reckon I could've handled this a bit better now in hindsight. Still the component is powerful and will render the correct type if you follow the format of questions in Question.js
+
 export default function FormQuestion({ currentStep, formData, setFormData, updateFields }) {
   function updateFields(fields) {
     setFormData((prev) => {
@@ -66,7 +63,7 @@ export default function FormQuestion({ currentStep, formData, setFormData, updat
               <textarea
                 autoFocus
                 required
-                maxLength='500'
+                maxLength="500"
                 value={formData[currentStep.id]}
                 name={currentStep.name}
                 onChange={(e) => updateFields({ [currentStep.id]: e.target.value })}
