@@ -1,4 +1,5 @@
 // components
+import React from 'react';
 import Navigation from './components/navigation.jsx';
 import Hero from './components/hero.jsx';
 import About from './components/about.jsx';

@@ -1,6 +1,6 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Daria from '/src/assets/Daria-hat.jpg';
+import Daria from '../assets/Daria-hat.jpg';
 import { useEffect } from 'react';
 import { RoughNotation } from 'react-rough-notation';
 import { underlineAnnotate, highlightAnnotate } from '../assets/annotationSettings.js';

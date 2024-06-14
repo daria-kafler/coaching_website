@@ -40,7 +40,7 @@ export default function Navigation() {
               <a href="#about">About</a>
             </li>
             <li className="navlink">
-              <a href="#products">Products</a>
+              <a href="#services">Services</a>
             </li>
             <li className="navlink">
               <a href="#testimonials">Testimonials</a>
